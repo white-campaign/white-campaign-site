@@ -292,7 +292,7 @@ const content = {
     title: 'The White Campaign',
     slogan: 'Shifting Up',
     university: 'Reichman University • Student Union',
-    heroTitle: 'We Came to Work for You',
+    heroTitle: 'We Came to Work',
     heroSubtitle: 'Three years we\'ve been living the field, the campus, from the inside, really from the inside: from studies to parties, from reserves to classrooms and clubs.',
     readPlatform: 'Read Our Full Platform',
     meetTeam: 'Meet the Team',
@@ -574,6 +574,7 @@ export default function Campaign() {
   const [highContrast, setHighContrast] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const [language, setLanguage] = useState('he');
+  const [showAccessibilityToolbar, setShowAccessibilityToolbar] = useState(false);
   const skipLinkRef = useRef(null);
 
   const t = content[language];
@@ -767,59 +768,77 @@ export default function Campaign() {
       </a>
 
       {/* Accessibility Toolbar */}
-      <div 
-        className={`fixed top-4 z-50 bg-white/95 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-lg border max-w-[280px] sm:max-w-none ${language === 'he' ? 'left-4' : 'right-4'}`}
-        role="toolbar"
-        aria-label={t.accessibility.title}
-      >
-        <h3 className="text-xs md:text-sm font-bold mb-2 text-gray-800">{t.accessibility.title}</h3>
-        <div className="flex flex-col gap-2">
-          <div className="flex gap-1 md:gap-2">
+      <div className={`fixed top-4 z-50 transition-all duration-300 ${language === 'he' ? 'left-4' : 'right-4'}`}>
+        {/* Toggle Button */}
+        <button
+          onClick={() => setShowAccessibilityToolbar(!showAccessibilityToolbar)}
+          className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg mb-2 focus-visible touch-manipulation"
+          aria-label={showAccessibilityToolbar ? 'סגור כלי נגישות' : 'פתח כלי נגישות'}
+          aria-expanded={showAccessibilityToolbar}
+        >
+          <Eye className="w-5 h-5" />
+        </button>
+
+        {/* Toolbar Content */}
+        <div 
+          className={`bg-white/95 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-lg border transition-all duration-300 transform ${
+            showAccessibilityToolbar 
+              ? 'opacity-100 translate-y-0 scale-100' 
+              : 'opacity-0 -translate-y-4 scale-95 pointer-events-none'
+          } max-w-[280px] sm:max-w-none`}
+          role="toolbar"
+          aria-label={t.accessibility.title}
+          aria-hidden={!showAccessibilityToolbar}
+        >
+          <h3 className="text-xs md:text-sm font-bold mb-2 text-gray-800">{t.accessibility.title}</h3>
+          <div className="flex flex-col gap-2">
+            <div className="flex gap-1 md:gap-2">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={increaseFontSize}
+                aria-label={t.accessibility.increaseFont}
+                className="p-2 min-w-[40px] touch-manipulation text-xs"
+              >
+                <Plus className="w-3 h-3 md:w-4 md:h-4" />
+                <span className="sr-only">{t.accessibility.increaseFont}</span>
+              </Button>
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={decreaseFontSize}
+                aria-label={t.accessibility.decreaseFont}
+                className="p-2 min-w-[40px] touch-manipulation text-xs"
+              >
+                <Minus className="w-3 h-3 md:w-4 md:h-4" />
+                <span className="sr-only">{t.accessibility.decreaseFont}</span>
+              </Button>
+            </div>
             <Button
               size="sm"
               variant="outline"
-              onClick={increaseFontSize}
-              aria-label={t.accessibility.increaseFont}
-              className="p-2 min-w-[40px] touch-manipulation"
+              onClick={toggleHighContrast}
+              aria-label={highContrast ? t.accessibility.normalContrast : t.accessibility.highContrast}
+              className="flex items-center gap-1 md:gap-2 text-xs p-2 touch-manipulation"
             >
-              <Plus className="w-3 h-3 md:w-4 md:h-4" />
-              <span className="sr-only">{t.accessibility.increaseFont}</span>
+              {highContrast ? <EyeOff className="w-3 h-3 md:w-4 md:h-4" /> : <Eye className="w-3 h-3 md:w-4 md:h-4" />}
+              <span className="text-[10px] md:text-xs leading-tight">
+                {highContrast ? t.accessibility.normalContrast : t.accessibility.highContrast}
+              </span>
             </Button>
             <Button
               size="sm"
               variant="outline"
-              onClick={decreaseFontSize}
-              aria-label={t.accessibility.decreaseFont}
-              className="p-2 min-w-[40px] touch-manipulation"
+              onClick={toggleLanguage}
+              aria-label={language === 'he' ? 'Switch to English' : 'עבור לעברית'}
+              className="flex items-center gap-1 md:gap-2 text-xs p-2 touch-manipulation"
             >
-              <Minus className="w-3 h-3 md:w-4 md:h-4" />
-              <span className="sr-only">{t.accessibility.decreaseFont}</span>
+              <Languages className="w-3 h-3 md:w-4 md:h-4" />
+              <span className="text-[10px] md:text-xs leading-tight">
+                {language === 'he' ? 'EN' : 'עב'}
+              </span>
             </Button>
           </div>
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={toggleHighContrast}
-            aria-label={highContrast ? t.accessibility.normalContrast : t.accessibility.highContrast}
-            className="flex items-center gap-1 md:gap-2 text-xs p-2 touch-manipulation"
-          >
-            {highContrast ? <EyeOff className="w-3 h-3 md:w-4 md:h-4" /> : <Eye className="w-3 h-3 md:w-4 md:h-4" />}
-            <span className="text-[10px] md:text-xs leading-tight">
-              {highContrast ? t.accessibility.normalContrast : t.accessibility.highContrast}
-            </span>
-          </Button>
-          <Button
-            size="sm"
-            variant="outline"
-            onClick={toggleLanguage}
-            aria-label={language === 'he' ? 'Switch to English' : 'עבור לעברית'}
-            className="flex items-center gap-1 md:gap-2 text-xs p-2 touch-manipulation"
-          >
-            <Languages className="w-3 h-3 md:w-4 md:h-4" />
-            <span className="text-[10px] md:text-xs leading-tight">
-              {language === 'he' ? 'EN' : 'עב'}
-            </span>
-          </Button>
         </div>
       </div>
 
@@ -883,56 +902,56 @@ export default function Campaign() {
               <header className="mb-8">
                 <h1 
                   id="hero-title"
-                  className="text-6xl md:text-8xl font-black text-white text-glow mb-4 leading-tight"
+                  className="text-4xl sm:text-6xl md:text-8xl font-black text-white text-glow mb-4 leading-tight"
                 >
                   {t.title}
                 </h1>
-                <div className="flex items-center justify-center gap-4 mb-6" role="img" aria-label="סלוגן הקמפיין">
-                  <div className="h-1 w-20 bg-gradient-to-r from-transparent to-white rounded-full" aria-hidden="true"></div>
-                  <Badge className="text-xl px-6 py-3 bg-white/20 text-white border-white/30 glass-effect animate-pulse-glow">
-                    <Plus className="w-5 h-5 ml-2" aria-hidden="true" />
+                <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6" role="img" aria-label="סלוגן הקמפיין">
+                  <div className="h-1 w-12 sm:w-20 bg-gradient-to-r from-transparent to-white rounded-full" aria-hidden="true"></div>
+                  <Badge className="text-lg sm:text-xl px-4 sm:px-6 py-2 sm:py-3 bg-white/20 text-white border-white/30 glass-effect animate-pulse-glow">
+                    <Plus className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2" aria-hidden="true" />
                     {t.slogan}
                   </Badge>
-                  <div className="h-1 w-20 bg-gradient-to-l from-transparent to-white rounded-full" aria-hidden="true"></div>
+                  <div className="h-1 w-12 sm:w-20 bg-gradient-to-l from-transparent to-white rounded-full" aria-hidden="true"></div>
                 </div>
-                <p className="text-2xl md:text-3xl text-blue-100 font-medium">
+                <p className="text-lg sm:text-2xl md:text-3xl text-blue-100 font-medium px-4">
                   {t.university}
                 </p>
               </header>
 
               {/* Main Message */}
-              <section className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 mb-8 glass-effect" aria-labelledby="main-message">
+              <section className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-12 mb-8 glass-effect mx-4 sm:mx-0" aria-labelledby="main-message">
                 <h2 
                   id="main-message"
-                  className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
+                  className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
                 >
                   {t.heroTitle} <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                     {language === 'he' ? 'בשבילכם' : 'for You'}
                   </span>
                 </h2>
-                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed max-w-4xl mx-auto">
+                <p className="text-base sm:text-xl md:text-2xl text-blue-100 leading-relaxed max-w-4xl mx-auto px-4 sm:px-0">
                   {t.heroSubtitle}
                 </p>
               </section>
 
               {/* Action Buttons */}
-              <nav className="flex flex-col sm:flex-row gap-4 justify-center items-center" aria-label="ניווט עיקרי">
+              <nav className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4" aria-label="ניווט עיקרי">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-white to-blue-50 text-blue-800 hover:from-blue-50 hover:to-white text-xl px-10 py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 animate-pulse-glow focus-visible"
+                  className="bg-gradient-to-r from-white to-blue-50 text-blue-800 hover:from-blue-50 hover:to-white text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 animate-pulse-glow focus-visible w-full sm:w-auto"
                   onClick={() => scrollToSection('platform')}
                   aria-describedby="platform-description"
                 >
-                  <Sparkles className={`${language === 'he' ? 'ml-3' : 'mr-3'} h-6 w-6`} aria-hidden="true" />
+                  <Sparkles className={`${language === 'he' ? 'ml-2 sm:ml-3' : 'mr-2 sm:mr-3'} h-5 w-5 sm:h-6 sm:w-6`} aria-hidden="true" />
                   {t.readPlatform}
-                  <ArrowRight className={`${language === 'he' ? 'mr-3' : 'ml-3'} h-6 w-6`} aria-hidden="true" />
+                  <ArrowRight className={`${language === 'he' ? 'mr-2 sm:mr-3' : 'ml-2 sm:ml-3'} h-5 w-5 sm:h-6 sm:w-6`} aria-hidden="true" />
                 </Button>
                 <div id="platform-description" className="sr-only">עבור לקריאת המצע המפורט של הקמפיין</div>
-                
+              
                 <Button 
                   variant="outline" 
                   size="lg"
-                  className="glass-effect text-white border-white/30 hover:bg-white/20 text-xl px-10 py-6 rounded-2xl transition-all duration-300 focus-visible"
+                  className="glass-effect text-white border-white/30 hover:bg-white/20 text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-6 rounded-2xl transition-all duration-300 focus-visible w-full sm:w-auto"
                   onClick={() => scrollToSection('team')}
                   aria-describedby="team-description"
                 >
@@ -961,23 +980,23 @@ export default function Campaign() {
                 <header className="text-center mb-16">
                   <h2 
                     id="team-title"
-                    className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent mb-4"
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent mb-4 px-4"
                   >
                     {t.teamTitle}
                   </h2>
                   <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full mb-6" aria-hidden="true"></div>
-                  <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                  <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
                     {t.teamSubtitle}
                   </p>
                 </header>
 
-                <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto px-4">
                   {/* Raz */}
                   <article className="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 border-0 shadow-xl overflow-hidden">
                     <Card>
-                      <CardHeader className="text-center p-8">
+                      <CardHeader className="text-center p-6 sm:p-8">
                         <div className="relative mb-6">
-                          <div className="w-40 h-40 mx-auto relative">
+                          <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto relative">
                             <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full animate-pulse-glow" aria-hidden="true"></div>
                             <div className="absolute inset-2 bg-white rounded-full overflow-hidden">
                               <img 
@@ -990,21 +1009,21 @@ export default function Campaign() {
                                 }}
                               />
                               <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center" style={{display: 'none'}}>
-                                <Users className="w-16 h-16 text-blue-600" aria-hidden="true" />
+                                <Users className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600" aria-hidden="true" />
                               </div>
                             </div>
                           </div>
                         </div>
-                        <CardTitle className="text-3xl text-blue-800 mb-3">{t.razDetails.title}</CardTitle>
-                        <Badge className="bg-gradient-to-r from-blue-500 to-blue-600 text-white text-lg px-6 py-2 rounded-full">
+                        <CardTitle className="text-2xl sm:text-3xl text-blue-800 mb-3">{t.razDetails.title}</CardTitle>
+                        <Badge className="bg-gradient-to-r from-blue-500 to-blue-600 text-white text-base sm:text-lg px-4 sm:px-6 py-2 rounded-full">
                           {t.chairman}
                         </Badge>
                       </CardHeader>
-                      <CardContent className="p-8 pt-0">
+                      <CardContent className="p-6 sm:p-8 pt-0">
                         <div className="space-y-3" role="list" aria-label={`פרטי ${t.razDetails.title}`}>
                           {t.razDetails.details.map((detail, index) => (
-                            <div key={index} className="bg-white/70 p-4 rounded-xl" role="listitem">
-                              <p className="font-semibold text-blue-800">{detail}</p>
+                            <div key={index} className="bg-white/70 p-3 sm:p-4 rounded-xl" role="listitem">
+                              <p className="font-semibold text-blue-800 text-sm sm:text-base">{detail}</p>
                             </div>
                           ))}
                         </div>
@@ -1015,9 +1034,9 @@ export default function Campaign() {
                   {/* Araba */}
                   <article className="card-hover bg-gradient-to-br from-pink-50 to-purple-100 border-0 shadow-xl overflow-hidden">
                     <Card>
-                      <CardHeader className="text-center p-8">
+                      <CardHeader className="text-center p-6 sm:p-8">
                         <div className="relative mb-6">
-                          <div className="w-40 h-40 mx-auto relative">
+                          <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto relative">
                             <div className="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-600 rounded-full animate-pulse-glow" aria-hidden="true"></div>
                             <div className="absolute inset-2 bg-white rounded-full overflow-hidden">
                               <img 
@@ -1030,21 +1049,21 @@ export default function Campaign() {
                                 }}
                               />
                               <div className="w-full h-full bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center" style={{display: 'none'}}>
-                                <Star className="w-16 h-16 text-pink-600" aria-hidden="true" />
+                                <Star className="w-12 h-12 sm:w-16 sm:h-16 text-pink-600" aria-hidden="true" />
                               </div>
                             </div>
                           </div>
                         </div>
-                        <CardTitle className="text-3xl text-pink-800 mb-3">{t.arabaDetails.title}</CardTitle>
-                        <Badge className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-lg px-6 py-2 rounded-full">
+                        <CardTitle className="text-2xl sm:text-3xl text-pink-800 mb-3">{t.arabaDetails.title}</CardTitle>
+                        <Badge className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-base sm:text-lg px-4 sm:px-6 py-2 rounded-full">
                           {t.viceChairman}
                         </Badge>
                       </CardHeader>
-                      <CardContent className="p-8 pt-0">
+                      <CardContent className="p-6 sm:p-8 pt-0">
                         <div className="space-y-3" role="list" aria-label={`פרטי ${t.arabaDetails.title}`}>
                           {t.arabaDetails.details.map((detail, index) => (
-                            <div key={index} className="bg-white/70 p-4 rounded-xl" role="listitem">
-                              <p className="font-semibold text-pink-800">{detail}</p>
+                            <div key={index} className="bg-white/70 p-3 sm:p-4 rounded-xl" role="listitem">
+                              <p className="font-semibold text-pink-800 text-sm sm:text-base">{detail}</p>
                             </div>
                           ))}
                         </div>
@@ -1054,9 +1073,9 @@ export default function Campaign() {
                 </div>
 
                 {/* Team Quote */}
-                <aside className="mt-16 text-center">
-                  <blockquote className="bg-gradient-to-r from-blue-600 to-indigo-600 animate-gradient p-8 rounded-3xl shadow-2xl max-w-4xl mx-auto">
-                    <p className="text-2xl md:text-3xl text-white font-bold leading-relaxed">
+                <aside className="mt-16 text-center px-4">
+                  <blockquote className="bg-gradient-to-r from-blue-600 to-indigo-600 animate-gradient p-6 sm:p-8 rounded-3xl shadow-2xl max-w-4xl mx-auto">
+                    <p className="text-lg sm:text-2xl md:text-3xl text-white font-bold leading-relaxed">
                       {t.teamQuote}
                     </p>
                   </blockquote>
@@ -1078,30 +1097,30 @@ export default function Campaign() {
                 <header className="text-center mb-16">
                   <h2 
                     id="vision-title"
-                    className="text-5xl font-bold bg-gradient-to-r from-blue-700 to-indigo-800 bg-clip-text text-transparent mb-4"
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-700 to-indigo-800 bg-clip-text text-transparent mb-4 px-4"
                   >
                     {t.visionTitle}
                   </h2>
                   <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-indigo-700 mx-auto rounded-full mb-6" aria-hidden="true"></div>
                 </header>
 
-                <div className="bg-white/60 backdrop-blur-xl p-12 rounded-3xl shadow-2xl border border-white/30">
-                  <p className="text-2xl leading-relaxed text-center mb-12 text-gray-800">
+                <div className="bg-white/60 backdrop-blur-xl p-8 sm:p-12 rounded-3xl shadow-2xl border border-white/30 mx-4 sm:mx-0">
+                  <p className="text-lg sm:text-2xl leading-relaxed text-center mb-12 text-gray-800 px-4 sm:px-0">
                     {t.visionText}
                   </p>
                   
-                  <div className="grid md:grid-cols-3 gap-8" role="list" aria-label="עקרונות החזון">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8" role="list" aria-label="עקרונות החזון">
                     {t.visionPoints.map((point, index) => (
                       <div key={index} className="text-center group" role="listitem">
-                        <div className={`w-20 h-20 ${index === 0 ? 'bg-gradient-to-br from-green-400 to-green-600' : index === 1 ? 'bg-gradient-to-br from-red-400 to-red-600' : 'bg-gradient-to-br from-blue-400 to-blue-600'} rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2`} aria-hidden="true">
-                          <span className="text-3xl text-white font-bold">
+                        <div className={`w-16 h-16 sm:w-20 sm:h-20 ${index === 0 ? 'bg-gradient-to-br from-green-400 to-green-600' : index === 1 ? 'bg-gradient-to-br from-red-400 to-red-600' : 'bg-gradient-to-br from-blue-400 to-blue-600'} rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2`} aria-hidden="true">
+                          <span className="text-2xl sm:text-3xl text-white font-bold">
                             {index === 0 ? '✓' : index === 1 ? '✗' : '↗'}
                           </span>
                         </div>
-                        <h3 className={`text-xl font-bold mb-2 ${index === 0 ? 'text-green-800' : index === 1 ? 'text-red-800' : 'text-blue-800'}`}>
+                        <h3 className={`text-lg sm:text-xl font-bold mb-2 ${index === 0 ? 'text-green-800' : index === 1 ? 'text-red-800' : 'text-blue-800'}`}>
                           {point.title}
                         </h3>
-                        <p className={`font-semibold ${index === 0 ? 'text-green-700' : index === 1 ? 'text-red-700' : 'text-blue-700'}`}>
+                        <p className={`font-semibold text-sm sm:text-base ${index === 0 ? 'text-green-700' : index === 1 ? 'text-red-700' : 'text-blue-700'}`}>
                           {point.subtitle}
                         </p>
                       </div>
@@ -1125,66 +1144,66 @@ export default function Campaign() {
                 <header className="text-center mb-16">
                   <h2 
                     id="platform-title"
-                    className="text-5xl font-bold bg-gradient-to-r from-blue-700 to-indigo-800 bg-clip-text text-transparent mb-4"
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-700 to-indigo-800 bg-clip-text text-transparent mb-4 px-4"
                   >
                     {t.platformTitle}
                   </h2>
                   <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-indigo-700 mx-auto rounded-full mb-6" aria-hidden="true"></div>
-                  <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
                     {t.platformSubtitle}
                   </p>
                 </header>
 
-                <div className="space-y-8 max-w-6xl mx-auto">
+                <div className="space-y-6 sm:space-y-8 max-w-6xl mx-auto px-4">
                   {t.sections.map((section, index) => (
                     <article key={section.id} className="card-hover overflow-hidden border-0 shadow-xl">
                       <Card>
-                        <CardHeader className={`bg-gradient-to-r ${section.color} animate-gradient text-white p-8`}>
-                          <CardTitle className="flex items-center gap-4 text-2xl">
-                            <div className="p-3 bg-white/20 rounded-full" aria-hidden="true">
-                              {index === 0 && <Shield className="w-8 h-8" />}
-                              {index === 1 && <Heart className="w-8 h-8" />}
-                              {index === 2 && <Users className="w-8 h-8" />}
-                              {index === 3 && <Target className="w-8 h-8" />}
-                              {index === 4 && <Lightbulb className="w-8 h-8" />}
-                              {index === 5 && <Globe className="w-8 h-8" />}
-                              {index === 6 && <Heart className="w-8 h-8" />}
-                              {index === 7 && <Star className="w-8 h-8" />}
-                              {index === 8 && <Lightbulb className="w-8 h-8" />}
-                              {index === 9 && <Users className="w-8 h-8" />}
-                              {index === 10 && <Target className="w-8 h-8" />}
-                              {index === 11 && <GraduationCap className="w-8 h-8" />}
-                              {index === 12 && <Shield className="w-8 h-8" />}
-                              {index === 13 && <Star className="w-8 h-8" />}
-                              {index === 14 && <Users className="w-8 h-8" />}
-                              {index === 15 && <Leaf className="w-8 h-8" />}
+                        <CardHeader className={`bg-gradient-to-r ${section.color} animate-gradient text-white p-6 sm:p-8`}>
+                          <CardTitle className="flex items-center gap-3 sm:gap-4 text-xl sm:text-2xl">
+                            <div className="p-2 sm:p-3 bg-white/20 rounded-full flex-shrink-0" aria-hidden="true">
+                              {index === 0 && <Shield className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 1 && <Heart className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 2 && <Users className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 3 && <Target className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 4 && <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 5 && <Globe className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 6 && <Heart className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 7 && <Star className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 8 && <Lightbulb className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 9 && <Users className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 10 && <Target className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 11 && <GraduationCap className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 12 && <Shield className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 13 && <Star className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 14 && <Users className="w-6 h-6 sm:w-8 sm:h-8" />}
+                              {index === 15 && <Leaf className="w-6 h-6 sm:w-8 sm:h-8" />}
                             </div>
-                            {section.title}
+                            <span className="leading-tight">{section.title}</span>
                           </CardTitle>
                         </CardHeader>
-                        <CardContent className="p-8">
-                          <p className="text-lg mb-6 text-gray-700 leading-relaxed">
+                        <CardContent className="p-6 sm:p-8">
+                          <p className="text-base sm:text-lg mb-4 sm:mb-6 text-gray-700 leading-relaxed">
                             {section.subtitle}
                           </p>
                           {section.content && (
-                            <p className="text-base mb-6 text-gray-600 leading-relaxed">
+                            <p className="text-sm sm:text-base mb-4 sm:mb-6 text-gray-600 leading-relaxed">
                               {section.content}
                             </p>
                           )}
-                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-2xl border-l-4 border-blue-500">
-                            <h4 className="font-bold text-blue-800 mb-3 text-lg">{section.actions}</h4>
+                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 rounded-2xl border-l-4 border-blue-500">
+                            <h4 className="font-bold text-blue-800 mb-3 text-base sm:text-lg">{section.actions}</h4>
                             <ul className="space-y-2 text-blue-700" role="list">
                               {section.items.map((item, itemIndex) => (
-                                <li key={itemIndex} className="flex items-center gap-3" role="listitem">
-                                  <div className="w-2 h-2 bg-blue-500 rounded-full" aria-hidden="true"></div>
-                                  {item}
+                                <li key={itemIndex} className="flex items-start gap-3 text-sm sm:text-base" role="listitem">
+                                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
+                                  <span>{item}</span>
                                 </li>
                               ))}
                             </ul>
                           </div>
                           {section.commitments && (
-                            <div className="mt-6 bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-2xl border-l-4 border-green-500">
-                              <h4 className="font-bold text-green-800 mb-3 text-lg">{section.promises}</h4>
+                            <div className="mt-4 sm:mt-6 bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 rounded-2xl border-l-4 border-green-500">
+                              <h4 className="font-bold text-green-800 mb-3 text-base sm:text-lg">{section.promises}</h4>
                               <ul className="space-y-2 text-green-700" role="list">
                                 {section.commitments.map((commitment, commitmentIndex) => (
                                   <li key={commitmentIndex} className="flex items-center gap-3" role="listitem">
@@ -1213,35 +1232,35 @@ export default function Campaign() {
               <div className="max-w-4xl mx-auto">
                 <h2 
                   id="cta-title"
-                  className="text-4xl md:text-6xl font-bold text-white mb-8 text-glow"
+                  className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 sm:mb-8 text-glow"
                 >
                   {language === 'he' ? 'פשוט ' : 'Simply '}
                   <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                     {language === 'he' ? 'מעלים הילוך' : 'Shifting Up'}
                   </span>
                 </h2>
-                
-                <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 md:p-12 mb-8 glass-effect">
-                  <p className="text-xl md:text-2xl text-blue-100 leading-relaxed mb-6">
+            
+                <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-12 mb-6 sm:mb-8 glass-effect">
+                  <p className="text-base sm:text-xl md:text-2xl text-blue-100 leading-relaxed mb-4 sm:mb-6">
                     {t.ctaText}
                   </p>
                   
-                  <div className="bg-gradient-to-r from-yellow-400/20 to-orange-400/20 p-6 rounded-2xl mb-6">
-                    <p className="text-xl text-white font-semibold">
+                  <div className="bg-gradient-to-r from-yellow-400/20 to-orange-400/20 p-4 sm:p-6 rounded-2xl mb-4 sm:mb-6">
+                    <p className="text-base sm:text-xl text-white font-semibold">
                       {t.ctaHighlight}
                     </p>
                   </div>
                   
-                  <div className="bg-white/20 p-8 rounded-2xl border border-white/30">
-                    <p className="text-3xl md:text-4xl font-black text-white animate-pulse-glow">
+                  <div className="bg-white/20 p-6 sm:p-8 rounded-2xl border border-white/30">
+                    <p className="text-xl sm:text-3xl md:text-4xl font-black text-white animate-pulse-glow">
                       {t.ctaFinal}
                     </p>
                   </div>
                 </div>
 
                 <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-orange-900 hover:from-yellow-300 hover:to-orange-400 text-xl px-12 py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 font-bold focus-visible"
+                  size="lg"
+                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-orange-900 hover:from-yellow-300 hover:to-orange-400 text-lg sm:text-xl px-8 sm:px-12 py-5 sm:py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 font-bold focus-visible w-full sm:w-auto"
                   aria-label="קריאה לפעולה - בואו נעלה הילוך יחד"
                 >
                   <Plus className={`${language === 'he' ? 'ml-3' : 'mr-3'} h-6 w-6`} aria-hidden="true" />
@@ -1255,25 +1274,25 @@ export default function Campaign() {
 
         {/* Footer */}
         <footer 
-          className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white py-12"
+          className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white py-8 sm:py-12"
           role="contentinfo"
           aria-label="מידע על הקמפיין"
         >
           <div className="container mx-auto px-4">
             <div className="text-center">
-              <h3 className="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
                 {t.title}
               </h3>
-              <div className="flex items-center justify-center gap-4 mb-6" aria-hidden="true">
-                <div className="h-px w-20 bg-gradient-to-r from-transparent to-gray-500"></div>
-                <Badge className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2">
-                  <Plus className="w-4 h-4 ml-1" />
+              <div className="flex items-center justify-center gap-2 sm:gap-4 mb-4 sm:mb-6" aria-hidden="true">
+                <div className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent to-gray-500"></div>
+                <Badge className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base">
+                  <Plus className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
                   {t.slogan}
                 </Badge>
-                <div className="h-px w-20 bg-gradient-to-l from-transparent to-gray-500"></div>
+                <div className="h-px w-12 sm:w-20 bg-gradient-to-l from-transparent to-gray-500"></div>
               </div>
-              <p className="text-gray-400 mb-4 text-lg">{t.university}</p>
-              <p className="text-gray-500 max-w-2xl mx-auto">
+              <p className="text-gray-400 mb-3 sm:mb-4 text-base sm:text-lg px-4">{t.university}</p>
+              <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base px-4">
                 {t.footerText}
               </p>
             </div>
