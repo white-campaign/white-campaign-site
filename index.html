@@ -2,9 +2,36 @@
 <html lang="he" dir="rtl">
   <head>
     <meta charset="UTF-8" />
+    
+    <!-- Mobile Optimization -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="הקמפיין הלבן" />
+    <meta name="theme-color" content="#3b82f6" />
+    
+    <!-- Touch Icons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Website</title>
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- SEO & Social -->
+    <title>הקמפיין הלבן - מעלים הילוך | אוניברסיטת רייכמן</title>
+    <meta name="description" content="הקמפיין הלבן לאגודת הסטודנטים באוניברסיטת רייכמן. רז בן חיים וערבה בנקין שדה - באנו לעבוד בשבילכם!" />
+    <meta name="keywords" content="קמפיין לבן, אוניברסיטת רייכמן, אגודת סטודנטים, רז בן חיים, ערבה בנקין שדה" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="הקמפיין הלבן - מעלים הילוך" />
+    <meta property="og:description" content="באנו לעבוד בשבילכם - הקמפיין הלבן לאגודת הסטודנטים" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="he_IL" />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/images/team-photo.jpg" as="image" />
+    
+    <!-- Performance optimizations -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
   </head>
   <body>
     <div id="root"></div>

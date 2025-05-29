@@ -1,0 +1,22 @@
+{
+  "name": "הקמפיין הלבן - מעלים הילוך",
+  "short_name": "קמפיין לבן",
+  "description": "הקמפיין הלבן לאגודת הסטודנטים באוניברסיטת רייכמן",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#3b82f6",
+  "background_color": "#ffffff",
+  "dir": "rtl",
+  "lang": "he",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "politics"],
+  "scope": "/"
+} 
