@@ -1022,8 +1022,8 @@ export default function Campaign() {
                       <CardContent className="p-6 sm:p-8 pt-0">
                         <div className="space-y-3" role="list" aria-label={`פרטי ${t.razDetails.title}`}>
                           {t.razDetails.details.map((detail, index) => (
-                            <div key={index} className="bg-white/70 p-3 sm:p-4 rounded-xl" role="listitem">
-                              <p className="font-semibold text-blue-800 text-sm sm:text-base">{detail}</p>
+                            <div key={index} className="bg-white/90 p-3 sm:p-4 rounded-xl border border-blue-100" role="listitem">
+                              <p className="font-semibold text-blue-900 text-sm sm:text-base">{detail}</p>
                             </div>
                           ))}
                         </div>
@@ -1062,8 +1062,8 @@ export default function Campaign() {
                       <CardContent className="p-6 sm:p-8 pt-0">
                         <div className="space-y-3" role="list" aria-label={`פרטי ${t.arabaDetails.title}`}>
                           {t.arabaDetails.details.map((detail, index) => (
-                            <div key={index} className="bg-white/70 p-3 sm:p-4 rounded-xl" role="listitem">
-                              <p className="font-semibold text-pink-800 text-sm sm:text-base">{detail}</p>
+                            <div key={index} className="bg-white/90 p-3 sm:p-4 rounded-xl border border-pink-100" role="listitem">
+                              <p className="font-semibold text-pink-900 text-sm sm:text-base">{detail}</p>
                             </div>
                           ))}
                         </div>
@@ -1104,23 +1104,23 @@ export default function Campaign() {
                   <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-indigo-700 mx-auto rounded-full mb-6" aria-hidden="true"></div>
                 </header>
 
-                <div className="bg-white/60 backdrop-blur-xl p-8 sm:p-12 rounded-3xl shadow-2xl border border-white/30 mx-4 sm:mx-0">
-                  <p className="text-lg sm:text-2xl leading-relaxed text-center mb-12 text-gray-800 px-4 sm:px-0">
+                <div className="bg-white/80 backdrop-blur-xl p-8 sm:p-12 rounded-3xl shadow-2xl border border-white/30 mx-4 sm:mx-0">
+                  <p className="text-lg sm:text-2xl leading-relaxed text-center mb-12 text-gray-900 px-4 sm:px-0">
                     {t.visionText}
                   </p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8" role="list" aria-label="עקרונות החזון">
                     {t.visionPoints.map((point, index) => (
                       <div key={index} className="text-center group" role="listitem">
-                        <div className={`w-16 h-16 sm:w-20 sm:h-20 ${index === 0 ? 'bg-gradient-to-br from-green-400 to-green-600' : index === 1 ? 'bg-gradient-to-br from-red-400 to-red-600' : 'bg-gradient-to-br from-blue-400 to-blue-600'} rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2`} aria-hidden="true">
+                        <div className={`w-16 h-16 sm:w-20 sm:h-20 ${index === 0 ? 'bg-gradient-to-br from-green-500 to-green-700' : index === 1 ? 'bg-gradient-to-br from-red-500 to-red-700' : 'bg-gradient-to-br from-blue-500 to-blue-700'} rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2`} aria-hidden="true">
                           <span className="text-2xl sm:text-3xl text-white font-bold">
                             {index === 0 ? '✓' : index === 1 ? '✗' : '↗'}
                           </span>
                         </div>
-                        <h3 className={`text-lg sm:text-xl font-bold mb-2 ${index === 0 ? 'text-green-800' : index === 1 ? 'text-red-800' : 'text-blue-800'}`}>
+                        <h3 className={`text-lg sm:text-xl font-bold mb-2 ${index === 0 ? 'text-green-900' : index === 1 ? 'text-red-900' : 'text-blue-900'}`}>
                           {point.title}
                         </h3>
-                        <p className={`font-semibold text-sm sm:text-base ${index === 0 ? 'text-green-700' : index === 1 ? 'text-red-700' : 'text-blue-700'}`}>
+                        <p className={`font-semibold text-sm sm:text-base ${index === 0 ? 'text-green-800' : index === 1 ? 'text-red-800' : 'text-blue-800'}`}>
                           {point.subtitle}
                         </p>
                       </div>
@@ -1181,21 +1181,21 @@ export default function Campaign() {
                             <span className="leading-tight">{section.title}</span>
                           </CardTitle>
                         </CardHeader>
-                        <CardContent className="p-6 sm:p-8">
-                          <p className="text-base sm:text-lg mb-4 sm:mb-6 text-gray-700 leading-relaxed">
+                        <CardContent className="p-6 sm:p-8 bg-white/95">
+                          <p className="text-base sm:text-lg mb-4 sm:mb-6 text-gray-800 leading-relaxed">
                             {section.subtitle}
                           </p>
                           {section.content && (
-                            <p className="text-sm sm:text-base mb-4 sm:mb-6 text-gray-600 leading-relaxed">
+                            <p className="text-sm sm:text-base mb-4 sm:mb-6 text-gray-700 leading-relaxed">
                               {section.content}
                             </p>
                           )}
                           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 rounded-2xl border-l-4 border-blue-500">
-                            <h4 className="font-bold text-blue-800 mb-3 text-base sm:text-lg">{section.actions}</h4>
-                            <ul className="space-y-2 text-blue-700" role="list">
+                            <h4 className="font-bold text-blue-900 mb-3 text-base sm:text-lg">{section.actions}</h4>
+                            <ul className="space-y-2 text-blue-800" role="list">
                               {section.items.map((item, itemIndex) => (
                                 <li key={itemIndex} className="flex items-start gap-3 text-sm sm:text-base" role="listitem">
-                                  <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
+                                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
                                   <span>{item}</span>
                                 </li>
                               ))}
@@ -1203,12 +1203,12 @@ export default function Campaign() {
                           </div>
                           {section.commitments && (
                             <div className="mt-4 sm:mt-6 bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 rounded-2xl border-l-4 border-green-500">
-                              <h4 className="font-bold text-green-800 mb-3 text-base sm:text-lg">{section.promises}</h4>
-                              <ul className="space-y-2 text-green-700" role="list">
+                              <h4 className="font-bold text-green-900 mb-3 text-base sm:text-lg">{section.promises}</h4>
+                              <ul className="space-y-2 text-green-800" role="list">
                                 {section.commitments.map((commitment, commitmentIndex) => (
-                                  <li key={commitmentIndex} className="flex items-center gap-3" role="listitem">
-                                    <div className="w-2 h-2 bg-green-500 rounded-full" aria-hidden="true"></div>
-                                    {commitment}
+                                  <li key={commitmentIndex} className="flex items-start gap-3 text-sm sm:text-base" role="listitem">
+                                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
+                                    <span>{commitment}</span>
                                   </li>
                                 ))}
                               </ul>
