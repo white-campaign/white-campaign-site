@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#f3f4f6"/>
+  <circle cx="200" cy="150" r="50" fill="#6b7280"/>
+  <path d="M130 250 Q200 200 270 250 L270 350 Q200 320 130 350 Z" fill="#6b7280"/>
+  <text x="200" y="380" text-anchor="middle" fill="#374151" font-family="Arial" font-size="16">תמונה תתווסף בקרוב</text>
+</svg> 

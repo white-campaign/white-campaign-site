@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8fafc"/>
+  
+  <!-- Blue gradient background -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#dbeafe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bfdbfe;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Person 1 (Left) -->
+  <circle cx="300" cy="200" r="60" fill="#3b82f6"/>
+  <rect x="240" y="260" width="120" height="140" rx="10" fill="#3b82f6"/>
+  
+  <!-- Person 2 (Right) -->
+  <circle cx="500" cy="200" r="60" fill="#ec4899"/>
+  <rect x="440" y="260" width="120" height="140" rx="10" fill="#ec4899"/>
+  
+  <!-- Text -->
+  <text x="400" y="480" text-anchor="middle" fill="#1f2937" font-family="Arial" font-size="32" font-weight="bold">הקמפיין הלבן</text>
+  <text x="400" y="520" text-anchor="middle" fill="#4b5563" font-family="Arial" font-size="20">רז וערבה - מעלים הילוך</text>
+  <text x="400" y="560" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="16">תמונת הצוות תתווסף בקרוב</text>
+</svg> 
