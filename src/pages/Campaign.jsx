@@ -730,6 +730,34 @@ export default function Campaign() {
           border: 2px solid #ffffff;
         }
         
+        /* Mobile text contrast improvements */
+        @media (max-width: 768px) {
+          .platform-text {
+            color: #1f2937 !important;
+            font-weight: 600 !important;
+          }
+          
+          .platform-subtitle {
+            color: #111827 !important;
+            font-weight: 700 !important;
+          }
+          
+          .platform-content {
+            color: #374151 !important;
+            font-weight: 500 !important;
+          }
+          
+          .platform-items {
+            color: #1e3a8a !important;
+            font-weight: 600 !important;
+          }
+          
+          .platform-commitments {
+            color: #14532d !important;
+            font-weight: 600 !important;
+          }
+        }
+        
         /* Focus styles */
         .focus-visible:focus {
           outline: 3px solid #3b82f6;
@@ -1181,20 +1209,20 @@ export default function Campaign() {
                             <span className="leading-tight">{section.title}</span>
                           </CardTitle>
                         </CardHeader>
-                        <CardContent className="p-6 sm:p-8 bg-white/95">
-                          <p className="text-base sm:text-lg mb-4 sm:mb-6 text-gray-800 leading-relaxed">
+                        <CardContent className="p-6 sm:p-8 bg-white border border-gray-100">{/* Changed from bg-white/95 to bg-white for stronger background */}
+                          <p className="platform-subtitle text-base sm:text-lg mb-4 sm:mb-6 text-gray-900 leading-relaxed font-semibold">
                             {section.subtitle}
                           </p>
                           {section.content && (
-                            <p className="text-sm sm:text-base mb-4 sm:mb-6 text-gray-700 leading-relaxed">
+                            <p className="platform-content text-sm sm:text-base mb-4 sm:mb-6 text-gray-800 leading-relaxed font-medium">
                               {section.content}
                             </p>
                           )}
                           <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 rounded-2xl border-l-4 border-blue-500">
                             <h4 className="font-bold text-blue-900 mb-3 text-base sm:text-lg">{section.actions}</h4>
-                            <ul className="space-y-2 text-blue-800" role="list">
+                            <ul className="space-y-2" role="list">
                               {section.items.map((item, itemIndex) => (
-                                <li key={itemIndex} className="flex items-start gap-3 text-sm sm:text-base" role="listitem">
+                                <li key={itemIndex} className="flex items-start gap-3 text-sm sm:text-base platform-items text-blue-900 font-semibold" role="listitem">
                                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
                                   <span>{item}</span>
                                 </li>
@@ -1204,9 +1232,9 @@ export default function Campaign() {
                           {section.commitments && (
                             <div className="mt-4 sm:mt-6 bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 rounded-2xl border-l-4 border-green-500">
                               <h4 className="font-bold text-green-900 mb-3 text-base sm:text-lg">{section.promises}</h4>
-                              <ul className="space-y-2 text-green-800" role="list">
+                              <ul className="space-y-2" role="list">
                                 {section.commitments.map((commitment, commitmentIndex) => (
-                                  <li key={commitmentIndex} className="flex items-start gap-3 text-sm sm:text-base" role="listitem">
+                                  <li key={commitmentIndex} className="flex items-start gap-3 text-sm sm:text-base platform-commitments text-green-900 font-semibold" role="listitem">
                                     <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
                                     <span>{commitment}</span>
                                   </li>
