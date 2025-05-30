@@ -761,6 +761,31 @@ export default function Campaign() {
             background: rgba(255, 255, 255, 1) !important;
             border: 2px solid #e5e7eb !important;
           }
+          
+          /* Force platform section to be always visible on mobile */
+          .platform-section {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            transition: none !important;
+          }
+          
+          .platform-card {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            transition: none !important;
+          }
+          
+          /* Ensure all sections are always visible on mobile */
+          section[data-animate] {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
+          
+          /* Force all cards to be visible */
+          .card-hover {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+          }
         }
         
         /* Focus styles */
@@ -1009,7 +1034,7 @@ export default function Campaign() {
             tabIndex="-1"
           >
             <div className="container mx-auto px-4">
-              <div className={`max-w-6xl mx-auto transition-all duration-1000 ${isVisible.team ? 'opacity-100 translate-y-0' : 'opacity-30 translate-y-10'}`}>
+              <div className="max-w-6xl mx-auto opacity-100 translate-y-0">
                 <header className="text-center mb-16">
                   <h2 
                     id="team-title"
@@ -1126,7 +1151,7 @@ export default function Campaign() {
             tabIndex="-1"
           >
             <div className="container mx-auto px-4">
-              <div className={`max-w-6xl mx-auto transition-all duration-1000 ${isVisible.vision ? 'opacity-100 translate-y-0' : 'opacity-30 translate-y-10'}`}>
+              <div className="max-w-6xl mx-auto opacity-100 translate-y-0">
                 <header className="text-center mb-16">
                   <h2 
                     id="vision-title"
@@ -1167,13 +1192,13 @@ export default function Campaign() {
           {/* Platform Section */}
           <section 
             id="platform" 
-            className="py-20 bg-gradient-to-b from-white to-slate-50" 
+            className="platform-section py-20 bg-gradient-to-b from-white to-slate-50" 
             data-animate
             aria-labelledby="platform-title"
             tabIndex="-1"
           >
             <div className="container mx-auto px-4">
-              <div className={`transition-all duration-1000 ${isVisible.platform ? 'opacity-100 translate-y-0' : 'opacity-30 translate-y-10'}`}>
+              <div className="platform-section opacity-100 translate-y-0">
                 <header className="text-center mb-16">
                   <h2 
                     id="platform-title"
@@ -1189,7 +1214,7 @@ export default function Campaign() {
 
                 <div className="space-y-6 sm:space-y-8 max-w-6xl mx-auto px-4">
                   {t.sections.map((section, index) => (
-                    <article key={section.id} className="card-hover overflow-hidden border-0 shadow-xl">
+                    <article key={section.id} className="platform-card card-hover overflow-hidden border-0 shadow-xl opacity-100 translate-y-0">
                       <Card>
                         <CardHeader className={`bg-gradient-to-r ${section.color} animate-gradient text-white p-6 sm:p-8`}>
                           <CardTitle className="flex items-center gap-3 sm:gap-4 text-xl sm:text-2xl">
