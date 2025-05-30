@@ -733,28 +733,33 @@ export default function Campaign() {
         /* Mobile text contrast improvements */
         @media (max-width: 768px) {
           .platform-text {
-            color: #1f2937 !important;
-            font-weight: 600 !important;
-          }
-          
-          .platform-subtitle {
-            color: #111827 !important;
+            color: #000000 !important;
             font-weight: 700 !important;
           }
           
+          .platform-subtitle {
+            color: #000000 !important;
+            font-weight: 800 !important;
+          }
+          
           .platform-content {
-            color: #374151 !important;
-            font-weight: 500 !important;
+            color: #1a1a1a !important;
+            font-weight: 600 !important;
           }
           
           .platform-items {
-            color: #1e3a8a !important;
-            font-weight: 600 !important;
+            color: #000080 !important;
+            font-weight: 700 !important;
           }
           
           .platform-commitments {
-            color: #14532d !important;
-            font-weight: 600 !important;
+            color: #006400 !important;
+            font-weight: 700 !important;
+          }
+          
+          .platform-background {
+            background: rgba(255, 255, 255, 1) !important;
+            border: 2px solid #e5e7eb !important;
           }
         }
         
@@ -1132,8 +1137,8 @@ export default function Campaign() {
                   <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-indigo-700 mx-auto rounded-full mb-6" aria-hidden="true"></div>
                 </header>
 
-                <div className="bg-white/80 backdrop-blur-xl p-8 sm:p-12 rounded-3xl shadow-2xl border border-white/30 mx-4 sm:mx-0">
-                  <p className="text-lg sm:text-2xl leading-relaxed text-center mb-12 text-gray-900 px-4 sm:px-0">
+                <div className="bg-white backdrop-blur-xl p-8 sm:p-12 rounded-3xl shadow-2xl border border-gray-200 mx-4 sm:mx-0">
+                  <p className="text-lg sm:text-2xl leading-relaxed text-center mb-12 text-black font-semibold px-4 sm:px-0">
                     {t.visionText}
                   </p>
                   
@@ -1209,33 +1214,33 @@ export default function Campaign() {
                             <span className="leading-tight">{section.title}</span>
                           </CardTitle>
                         </CardHeader>
-                        <CardContent className="p-6 sm:p-8 bg-white border border-gray-100">{/* Changed from bg-white/95 to bg-white for stronger background */}
-                          <p className="platform-subtitle text-base sm:text-lg mb-4 sm:mb-6 text-gray-900 leading-relaxed font-semibold">
+                        <CardContent className="platform-background p-6 sm:p-8 bg-white border border-gray-200 shadow-sm">
+                          <p className="platform-subtitle text-base sm:text-lg mb-4 sm:mb-6 text-black leading-relaxed font-bold">
                             {section.subtitle}
                           </p>
                           {section.content && (
-                            <p className="platform-content text-sm sm:text-base mb-4 sm:mb-6 text-gray-800 leading-relaxed font-medium">
+                            <p className="platform-content text-sm sm:text-base mb-4 sm:mb-6 text-gray-900 leading-relaxed font-semibold">
                               {section.content}
                             </p>
                           )}
-                          <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6 rounded-2xl border-l-4 border-blue-500">
-                            <h4 className="font-bold text-blue-900 mb-3 text-base sm:text-lg">{section.actions}</h4>
+                          <div className="bg-blue-50 p-4 sm:p-6 rounded-2xl border-2 border-blue-200">
+                            <h4 className="font-black text-blue-950 mb-3 text-base sm:text-lg">{section.actions}</h4>
                             <ul className="space-y-2" role="list">
                               {section.items.map((item, itemIndex) => (
-                                <li key={itemIndex} className="flex items-start gap-3 text-sm sm:text-base platform-items text-blue-900 font-semibold" role="listitem">
-                                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
+                                <li key={itemIndex} className="flex items-start gap-3 text-sm sm:text-base platform-items text-blue-950 font-bold" role="listitem">
+                                  <div className="w-2 h-2 bg-blue-800 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
                                   <span>{item}</span>
                                 </li>
                               ))}
                             </ul>
                           </div>
                           {section.commitments && (
-                            <div className="mt-4 sm:mt-6 bg-gradient-to-r from-green-50 to-emerald-50 p-4 sm:p-6 rounded-2xl border-l-4 border-green-500">
-                              <h4 className="font-bold text-green-900 mb-3 text-base sm:text-lg">{section.promises}</h4>
+                            <div className="mt-4 sm:mt-6 bg-green-50 p-4 sm:p-6 rounded-2xl border-2 border-green-200">
+                              <h4 className="font-black text-green-950 mb-3 text-base sm:text-lg">{section.promises}</h4>
                               <ul className="space-y-2" role="list">
                                 {section.commitments.map((commitment, commitmentIndex) => (
-                                  <li key={commitmentIndex} className="flex items-start gap-3 text-sm sm:text-base platform-commitments text-green-900 font-semibold" role="listitem">
-                                    <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
+                                  <li key={commitmentIndex} className="flex items-start gap-3 text-sm sm:text-base platform-commitments text-green-950 font-bold" role="listitem">
+                                    <div className="w-2 h-2 bg-green-800 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
                                     <span>{commitment}</span>
                                   </li>
                                 ))}
