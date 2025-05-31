@@ -957,124 +957,216 @@ export default function Campaign() {
             role="banner"
           >
             {/* Content and Image Layout */}
-            <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center relative z-10 min-h-screen">
+            <div className="container mx-auto px-4 flex flex-col items-center relative z-10 min-h-screen">
               
-              {/* Content Side */}
-              <div className={`text-center lg:text-${language === 'he' ? 'right' : 'left'} lg:order-${language === 'he' ? '2' : '1'} flex flex-col justify-center`}>
-                {/* Logo/Title */}
-                <header className="mb-8">
-                  <h1 
-                    id="hero-title"
-                    className="text-4xl sm:text-6xl md:text-7xl font-black text-white mb-6 leading-tight glow-white"
-                    style={{ fontFamily: 'Rubik, sans-serif' }}
-                  >
-                    {t.title}
-                  </h1>
-                  <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6" role="img" aria-label="סלוגן הקמפיין">
-                    <div className="h-1 w-16 sm:w-20 bg-gradient-to-r from-transparent to-white rounded-full" aria-hidden="true"></div>
-                    <div className="flex items-center justify-center">
-                      <Badge className="text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 bg-white/20 text-white border-white/30 glass-effect flex items-center" style={{ fontFamily: 'Rubik, sans-serif' }}>
-                        <Plus className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3" aria-hidden="true" />
-                        {t.slogan}
-                      </Badge>
-                    </div>
-                    <div className="h-1 w-16 sm:w-20 bg-gradient-to-l from-transparent to-white rounded-full" aria-hidden="true"></div>
+              {/* Logo/Title - moved down slightly */}
+              <header className="text-center mb-6 mt-20">
+                <h1 
+                  id="hero-title"
+                  className="text-4xl sm:text-6xl md:text-7xl font-black text-white mb-6 leading-tight glow-white"
+                  style={{ fontFamily: 'Rubik, sans-serif' }}
+                >
+                  {t.title}
+                </h1>
+                <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6" role="img" aria-label="סלוגן הקמפיין">
+                  <div className="h-1 w-16 sm:w-20 bg-gradient-to-r from-transparent to-white rounded-full" aria-hidden="true"></div>
+                  <div className="flex items-center justify-center">
+                    <Badge className="text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 bg-white/20 text-white border-white/30 glass-effect flex items-center" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                      <Plus className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3" aria-hidden="true" />
+                      {t.slogan}
+                    </Badge>
                   </div>
-                  <p className="text-base sm:text-lg md:text-xl text-white font-medium opacity-90" style={{ fontFamily: 'Rubik, sans-serif' }}>
-                    {t.university}
-                  </p>
-                </header>
+                  <div className="h-1 w-16 sm:w-20 bg-gradient-to-l from-transparent to-white rounded-full" aria-hidden="true"></div>
+                </div>
+                <p className="text-base sm:text-lg md:text-xl text-white font-medium opacity-90" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                  {t.university}
+                </p>
+              </header>
 
+              {/* Main Image - Centered on mobile */}
+              <div className="w-full max-w-lg lg:max-w-xl mb-8 lg:hidden">
+                <div className="aspect-square w-full relative">
+                  {/* Enhanced glow effect */}
+                  <div className="absolute inset-0 rounded-full blur-2xl opacity-60" style={{ background: 'linear-gradient(45deg, #C6E5F3, #4A90E2, #1F396E)' }} aria-hidden="true"></div>
+                  <div className="absolute inset-2 rounded-full blur-xl opacity-40" style={{ background: 'linear-gradient(135deg, #BFE7F5, #C6E5F3)' }} aria-hidden="true"></div>
+                  
+                  {/* Main image container with enhanced styling */}
+                  <div className="absolute inset-4 bg-white rounded-full overflow-hidden shadow-2xl" style={{ 
+                    boxShadow: '0 25px 50px rgba(31, 57, 110, 0.3), 0 0 0 4px rgba(198, 229, 243, 0.3), 0 0 0 8px rgba(198, 229, 243, 0.1)' 
+                  }}>
+                    <img 
+                      src="/images/team-photo.jpg" 
+                      alt="רז בן חיים וערבה בנקין שדה, מועמדי הקמפיין הלבן לאגודת הסטודנטים באוניברסיטת רייכמן" 
+                      className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        e.target.nextElementSibling.style.display = 'flex';
+                      }}
+                    />
+                    <div 
+                      className="w-full h-full flex items-center justify-center flex-col"
+                      style={{display: 'none', background: 'linear-gradient(135deg, #C6E5F3, #BFE7F5)'}}
+                    >
+                      <div className="flex gap-8 mb-8">
+                        <div className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)' }} aria-hidden="true">
+                          <Users className="w-12 h-12 text-white" />
+                        </div>
+                        <div className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #1F396E, #4A90E2)' }} aria-hidden="true">
+                          <Star className="w-12 h-12 text-white" />
+                        </div>
+                      </div>
+                      <p className="text-3xl font-bold text-center px-8 leading-tight" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>
+                        רז וערבה<br />
+                        <span className="text-xl font-semibold" style={{ color: '#4A90E2' }}>הקמפיין הלבן</span>
+                      </p>
+                    </div>
+                  </div>
+                  
+                  {/* Floating elements around the image */}
+                  <div className="absolute top-4 right-4 w-6 h-6 rounded-full animate-float" style={{ background: '#C6E5F3', animationDelay: '0s' }} aria-hidden="true"></div>
+                  <div className="absolute bottom-8 left-8 w-4 h-4 rounded-full animate-float" style={{ background: '#4A90E2', animationDelay: '2s' }} aria-hidden="true"></div>
+                  <div className="absolute top-1/2 right-0 w-3 h-3 rounded-full animate-float" style={{ background: '#1F396E', animationDelay: '4s' }} aria-hidden="true"></div>
+                </div>
+              </div>
+
+              {/* Desktop Layout */}
+              <div className="hidden lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center w-full max-w-6xl">
+                
+                {/* Content Side - Desktop */}
+                <div className={`text-center lg:text-${language === 'he' ? 'right' : 'left'} lg:order-${language === 'he' ? '2' : '1'} flex flex-col justify-center`}>
+                  {/* Main Message */}
+                  <section className="glass-effect rounded-2xl p-6 sm:p-8 mb-8" aria-labelledby="main-message">
+                    <h2 
+                      id="main-message"
+                      className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight"
+                      style={{ fontFamily: 'Rubik, sans-serif' }}
+                    >
+                      {t.heroTitle} <span style={{ color: '#1F396E' }}>
+                        {language === 'he' ? 'בשבילכם' : 'for You'}
+                      </span>
+                    </h2>
+                    <p className="text-sm sm:text-base md:text-lg text-white leading-relaxed opacity-90" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                      {t.heroSubtitle}
+                    </p>
+                  </section>
+
+                  {/* Action Buttons */}
+                  <nav className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center" aria-label="ניווט עיקרי">
+                    <Button 
+                      size="lg" 
+                      className="bg-white text-lg px-8 py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus-visible w-full sm:w-auto"
+                      style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}
+                      onClick={() => scrollToSection('platform')}
+                      aria-describedby="platform-description"
+                    >
+                      <Sparkles className={`${language === 'he' ? 'ml-2' : 'mr-2'} h-5 w-5`} aria-hidden="true" />
+                      {t.readPlatform}
+                    </Button>
+                    <div id="platform-description" className="sr-only">עבור לקריאת המצע המפורט של הקמפיין</div>
+                  
+                    <Button 
+                      variant="outline" 
+                      size="lg"
+                      className="glass-effect text-white border-white/30 hover:bg-white/20 text-lg px-8 py-5 rounded-xl transition-all duration-300 focus-visible w-full sm:w-auto"
+                      onClick={() => scrollToSection('team')}
+                      aria-describedby="team-description"
+                      style={{ fontFamily: 'Rubik, sans-serif' }}
+                    >
+                      {t.meetTeam}
+                    </Button>
+                    <div id="team-description" className="sr-only">עבור להכרת צוות הקמפיין</div>
+                  </nav>
+                </div>
+
+                {/* Image Side - Desktop */}
+                <div className={`lg:order-${language === 'he' ? '1' : '2'} flex justify-center lg:justify-${language === 'he' ? 'start' : 'end'}`}>
+                  <div className="relative w-full max-w-lg lg:max-w-2xl">
+                    <div className="aspect-square w-full relative">
+                      {/* Enhanced glow effect */}
+                      <div className="absolute inset-0 rounded-full blur-2xl opacity-60" style={{ background: 'linear-gradient(45deg, #C6E5F3, #4A90E2, #1F396E)' }} aria-hidden="true"></div>
+                      <div className="absolute inset-2 rounded-full blur-xl opacity-40" style={{ background: 'linear-gradient(135deg, #BFE7F5, #C6E5F3)' }} aria-hidden="true"></div>
+                      
+                      {/* Main image container with enhanced styling */}
+                      <div className="absolute inset-4 bg-white rounded-full overflow-hidden shadow-2xl" style={{ 
+                        boxShadow: '0 25px 50px rgba(31, 57, 110, 0.3), 0 0 0 4px rgba(198, 229, 243, 0.3), 0 0 0 8px rgba(198, 229, 243, 0.1)' 
+                      }}>
+                        <img 
+                          src="/images/team-photo.jpg" 
+                          alt="רז בן חיים וערבה בנקין שדה, מועמדי הקמפיין הלבן לאגודת הסטודנטים באוניברסיטת רייכמן" 
+                          className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                          onError={(e) => {
+                            e.target.style.display = 'none';
+                            e.target.nextElementSibling.style.display = 'flex';
+                          }}
+                        />
+                        <div 
+                          className="w-full h-full flex items-center justify-center flex-col"
+                          style={{display: 'none', background: 'linear-gradient(135deg, #C6E5F3, #BFE7F5)'}}
+                        >
+                          <div className="flex gap-8 mb-8">
+                            <div className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)' }} aria-hidden="true">
+                              <Users className="w-12 h-12 text-white" />
+                            </div>
+                            <div className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #1F396E, #4A90E2)' }} aria-hidden="true">
+                              <Star className="w-12 h-12 text-white" />
+                            </div>
+                          </div>
+                          <p className="text-3xl font-bold text-center px-8 leading-tight" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>
+                            רז וערבה<br />
+                            <span className="text-xl font-semibold" style={{ color: '#4A90E2' }}>הקמפיין הלבן</span>
+                          </p>
+                        </div>
+                      </div>
+                      
+                      {/* Floating elements around the image */}
+                      <div className="absolute top-4 right-4 w-6 h-6 rounded-full animate-float" style={{ background: '#C6E5F3', animationDelay: '0s' }} aria-hidden="true"></div>
+                      <div className="absolute bottom-8 left-8 w-4 h-4 rounded-full animate-float" style={{ background: '#4A90E2', animationDelay: '2s' }} aria-hidden="true"></div>
+                      <div className="absolute top-1/2 right-0 w-3 h-3 rounded-full animate-float" style={{ background: '#1F396E', animationDelay: '4s' }} aria-hidden="true"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile Content - Below Image */}
+              <div className="lg:hidden text-center w-full max-w-lg">
                 {/* Main Message */}
-                <section className="glass-effect rounded-2xl p-6 sm:p-8 mb-8" aria-labelledby="main-message">
+                <section className="glass-effect rounded-2xl p-6 mb-8" aria-labelledby="main-message-mobile">
                   <h2 
-                    id="main-message"
-                    className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight"
+                    id="main-message-mobile"
+                    className="text-2xl font-bold text-white mb-4 leading-tight"
                     style={{ fontFamily: 'Rubik, sans-serif' }}
                   >
                     {t.heroTitle} <span style={{ color: '#1F396E' }}>
                       {language === 'he' ? 'בשבילכם' : 'for You'}
                     </span>
                   </h2>
-                  <p className="text-sm sm:text-base md:text-lg text-white leading-relaxed opacity-90" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                  <p className="text-sm leading-relaxed text-white opacity-90" style={{ fontFamily: 'Rubik, sans-serif' }}>
                     {t.heroSubtitle}
                   </p>
                 </section>
 
                 {/* Action Buttons */}
-                <nav className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center" aria-label="ניווט עיקרי">
+                <nav className="flex flex-col gap-4 items-center" aria-label="ניווט עיקרי">
                   <Button 
                     size="lg" 
-                    className="bg-white text-lg px-8 py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus-visible w-full sm:w-auto"
+                    className="bg-white text-lg px-8 py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus-visible w-full"
                     style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}
                     onClick={() => scrollToSection('platform')}
-                    aria-describedby="platform-description"
                   >
                     <Sparkles className={`${language === 'he' ? 'ml-2' : 'mr-2'} h-5 w-5`} aria-hidden="true" />
                     {t.readPlatform}
                   </Button>
-                  <div id="platform-description" className="sr-only">עבור לקריאת המצע המפורט של הקמפיין</div>
                 
                   <Button 
                     variant="outline" 
                     size="lg"
-                    className="glass-effect text-white border-white/30 hover:bg-white/20 text-lg px-8 py-5 rounded-xl transition-all duration-300 focus-visible w-full sm:w-auto"
+                    className="glass-effect text-white border-white/30 hover:bg-white/20 text-lg px-8 py-5 rounded-xl transition-all duration-300 focus-visible w-full"
                     onClick={() => scrollToSection('team')}
-                    aria-describedby="team-description"
                     style={{ fontFamily: 'Rubik, sans-serif' }}
                   >
                     {t.meetTeam}
                   </Button>
-                  <div id="team-description" className="sr-only">עבור להכרת צוות הקמפיין</div>
                 </nav>
-              </div>
-
-              {/* Image Side - Much Larger and Improved */}
-              <div className={`lg:order-${language === 'he' ? '1' : '2'} flex justify-center lg:justify-${language === 'he' ? 'start' : 'end'}`}>
-                <div className="relative w-full max-w-lg lg:max-w-2xl">
-                  <div className="aspect-square w-full relative">
-                    {/* Enhanced glow effect */}
-                    <div className="absolute inset-0 rounded-full blur-2xl opacity-60" style={{ background: 'linear-gradient(45deg, #C6E5F3, #4A90E2, #1F396E)' }} aria-hidden="true"></div>
-                    <div className="absolute inset-2 rounded-full blur-xl opacity-40" style={{ background: 'linear-gradient(135deg, #BFE7F5, #C6E5F3)' }} aria-hidden="true"></div>
-                    
-                    {/* Main image container with enhanced styling */}
-                    <div className="absolute inset-4 bg-white rounded-full overflow-hidden shadow-2xl" style={{ 
-                      boxShadow: '0 25px 50px rgba(31, 57, 110, 0.3), 0 0 0 4px rgba(198, 229, 243, 0.3), 0 0 0 8px rgba(198, 229, 243, 0.1)' 
-                    }}>
-                      <img 
-                        src="/images/team-photo.jpg" 
-                        alt="רז בן חיים וערבה בנקין שדה, מועמדי הקמפיין הלבן לאגודת הסטודנטים באוניברסיטת רייכמן" 
-                        className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
-                        onError={(e) => {
-                          e.target.style.display = 'none';
-                          e.target.nextElementSibling.style.display = 'flex';
-                        }}
-                      />
-                      <div 
-                        className="w-full h-full flex items-center justify-center flex-col"
-                        style={{display: 'none', background: 'linear-gradient(135deg, #C6E5F3, #BFE7F5)'}}
-                      >
-                        <div className="flex gap-8 mb-8">
-                          <div className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)' }} aria-hidden="true">
-                            <Users className="w-12 h-12 text-white" />
-                          </div>
-                          <div className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #1F396E, #4A90E2)' }} aria-hidden="true">
-                            <Star className="w-12 h-12 text-white" />
-                          </div>
-                        </div>
-                        <p className="text-3xl font-bold text-center px-8 leading-tight" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>
-                          רז וערבה<br />
-                          <span className="text-xl font-semibold" style={{ color: '#4A90E2' }}>הקמפיין הלבן</span>
-                        </p>
-                      </div>
-                    </div>
-                    
-                    {/* Floating elements around the image */}
-                    <div className="absolute top-4 right-4 w-6 h-6 rounded-full animate-float" style={{ background: '#C6E5F3', animationDelay: '0s' }} aria-hidden="true"></div>
-                    <div className="absolute bottom-8 left-8 w-4 h-4 rounded-full animate-float" style={{ background: '#4A90E2', animationDelay: '2s' }} aria-hidden="true"></div>
-                    <div className="absolute top-1/2 right-0 w-3 h-3 rounded-full animate-float" style={{ background: '#1F396E', animationDelay: '4s' }} aria-hidden="true"></div>
-                  </div>
-                </div>
               </div>
             </div>
 
