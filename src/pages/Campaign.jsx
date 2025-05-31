@@ -23,7 +23,7 @@ const content = {
     razDetails: {
       title: 'רז בן חיים',
       details: [
-        'משפטים MBA שנה ג׳',
+        'סטודנט למשפטים MBA שנה ג׳',
         'מנהל מחלקת מועדונים',
         'מנהל "סטודנטים בחזית"',
         'תכנית רובינשטיין למנהיגות חוקתית'
@@ -32,7 +32,7 @@ const content = {
     arabaDetails: {
       title: 'ערבה בנקין שדה',
       details: [
-        'תקשורת שנה ג׳',
+        'סטודנטית לתקשורת שנה ג׳',
         'רכזת בית הספר סמי עופר לתקשורת',
         'ראש מחלקת שיווק וסושיאל',
         'תכנית רבין למנהיגות'
@@ -53,225 +53,222 @@ const content = {
     sections: [
       {
         id: 'reservists',
-        title: 'תמיכה במילואימניקים',
+        title: 'מעלים הילוך בתמיכה במילואימניקים',
         subtitle: 'המילואים לא נגמרים בשטח – האגודה תהיה הבית של משרתי המילואים לאורך כל התואר.',
         content: 'רז מכהן כמנהל בארגון "סטודנטים בחזית" שהוקם בתחילת המלחמה ולקח חלק בגיבוש מתווה המילואימניקים הראשון שנכתב, וברמה הארצית. במקביל – יזם והקים את קבוצת "המילואימניקים של רייכמן", ריכז מאות פניות מסטודנטים המשרתים בכלל החזיתות, ונפגש עם נשיא האוניברסיטה לשיקוף הצרכים האמיתיים שעלו מהשטח.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'סיכומים מסטודנטים ועדכונים מהמרצים ויחס אישי מהם',
           'ליווי אישי של חברי המסלול וסיוע אקדמי',
           'חיבור לטיפול ועיבוד פסיכולוגי',
           'קשר ישיר ונגיש מול הדיקנים'
         ],
-        color: 'from-blue-500 via-blue-600 to-blue-700'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'fun',
-        title: 'פאן ואווירה בקמפוס',
+        title: 'מעלים הילוך בפאן ואווירה בקמפוס',
         subtitle: 'הסטודנטים ברייכמן לא צריכים סיבה למסיבה – פשוט מגיע לנו ליהנות.',
         content: 'נחזיר את האווירה האגדית של "הבינתחומי" עם מסיבות שיזכירו לכם למה אתם פה (וזה לא רק בשביל התואר...). הופעות, אירועים, פעילויות מגבשות, ירידים ופסטיבלים שיחברו את הסטודנטים לקהילה המדהימה והמגוונת.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'הופעות ואירועים מגבשים',
           'פסטיבלים וירידים',
           'הקרנות סרט דרייב-אין',
           'פסטיבלי אוכל',
-          'אירועי שיא לאורך כל שנת הלימודים'
-        ],
-        promises: 'הבטחות:',
-        commitments: [
+          'אירועי שיא לאורך כל שנת הלימודים',
           'יחס הוגן בין היצע לביקוש במכירות הכרטיסים',
           'אירועים לכל הקהלים: ישראלים, בינלאומיים',
           'ללא תורים ולחצים',
           'נגישות וזמינות לכל הסטודנטים'
         ],
-        color: 'from-purple-500 via-pink-500 to-purple-600'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'networking',
-        title: 'נטוורקינג וקהילת רייכמן',
+        title: 'מעלים הילוך בנטוורקינג וקהילת רייכמן',
         subtitle: 'הנטוורקינג הוא אחד המשאבים הייחודיים לאוניברסיטת רייכמן!',
         content: 'המטרה שלנו היא ליצור קהילה חזקה ומגובשת, שדואגת לסטודנטים של היום וגם לבוגריה. נפעל לחיבור בין סטודנטים שונים בקמפוס, מבתי ספר שונים ומשנים שונות.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'קבוצות חשיבה ומפגשי אירוח בין בתי ספר',
           'שיתופי פעולה וחיבורים בין הסטודנטים',
           'תחושת שייכות וחברים מכל החוגים',
           'הפיכה לקמפוס הכי מאוחד והכי חזק בארץ'
         ],
-        color: 'from-cyan-500 via-blue-500 to-indigo-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'rights',
-        title: 'זכויות הסטודנטים',
+        title: 'מעלים הילוך בזכויות הסטודנטים',
         subtitle: 'עבודות מתעכבות? זכויות מופרות? יש לכם כתובת אחת ברורה.',
-        content: 'ערבה בעלת ניסיון של שלוש שנים כנציגה ושנה כרכזת אקדמית – היא מכירה את המערכת, את הפתרונות, ואת הדרך לעשות סדר.',
-        actions: 'מה נעשה:',
+        content: 'ערבה בעלת ניסיון של שלוש שנים כנציגה ושנה כרכזת אקדמית – היא מכירה את המערכת, את הפתרונות, ואת הדרך לעשות סדר. אנחנו כאן כדי לוודא שהזכויות שלכם מכובדות ושאתם מקבלים את מה שמגיע לכם.',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'חיזוק נציגי ורכזי המסלול',
           'בניית פורום אקדמי אפקטיבי',
           'מענה מהיר ומדויק לכל פנייה',
           'טיפול בעיכובים ובחינת חריגות'
         ],
-        color: 'from-green-500 via-emerald-500 to-green-600'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'smart-campus',
-        title: 'קמפוס חכם ונגיש',
+        title: 'מעלים הילוך בקמפוס חכם ונגיש',
         subtitle: 'נגמרו החיפושים אחרי כיתה פנויה!',
         content: 'נשיק מערכת חכמה שתשקף בזמן אמת כיתות פנויות ומרחבי למידה זמינים – לאורך כל השנה, ובמיוחד בתקופות מבחנים.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'מערכת חכמה לכיתות פנויות בזמן אמת',
           'אפשרות להזמין כיתות מראש',
           'מאגר לימודי מקיף עם סיכומים מכל בתי הספר',
           'הכל במקום אחד, נוח ונגיש'
         ],
-        color: 'from-teal-500 via-cyan-500 to-blue-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'international',
-        title: 'בית הספר הבינלאומי',
+        title: 'מעלים הילוך בבית הספר הבינלאומי',
         subtitle: 'בית הספר הבינלאומי צריך להיות מעורב ברווחה ובאווירה, בקהילה וברוח המקום.',
-        content: 'נתקין תפקיד מיוחד לנציג מבית הספר הבינלאומי בהנהלת האגודה, שמטרתו תהיה לשקף את הצרכים הסטודנטיאליים.',
-        actions: 'מה נעשה:',
+        content: 'נגדיר תפקיד מיוחד לנציג מבית הספר הבינלאומי בהנהלת האגודה, שמטרתו תהיה לשקף את הצרכים הסטודנטיאליים.',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'ייצוג מיוחד בהנהלת האגודה',
           'שיקוף צרכים סטודנטיאליים בזמן אמת',
           'התאמת אירועים לכל הקהלים',
           'טיפול בבעיות ודרישות בזמן אמת'
         ],
-        color: 'from-indigo-500 via-purple-500 to-pink-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'wellness',
-        title: 'רווחה בקמפוס',
+        title: 'מעלים הילוך ברווחה בקמפוס',
         subtitle: 'הקמפוס הוא הבית שלנו – ואנחנו כאן כדי להפוך אותו לטוב יותר.',
         content: 'נחזיר את מה שעבד, נחזק את מה שצריך, ונשדרג את מה שאפשר – מהכיתות והספריות, דרך הספורט והפנאי, ועד למעונות וחיי היומיום. וכן, גם הקרנף יקבל סוף סוף מענה.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'שיפור הכיתות והספריות',
           'שדרוג הספורט והפנאי',
           'שיפור המעונות וחיי היומיום',
           'פתרון לבעיית הקרנף'
         ],
-        color: 'from-teal-500 via-emerald-500 to-green-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'entrepreneurship',
-        title: 'יזמות ותמיכה בסטודנטים עצמאיים',
+        title: 'מעלים הילוך ביזמות ותמיכה בסטודנטים עצמאיים',
         subtitle: 'יש לא מעט סטודנטים שלא רק לומדים – אלא גם בונים, יוצרים ומובילים.',
         content: 'נרצה לראות אותם מקבלים יותר מקום, יותר חיבורים ויותר הזדמנויות. נוציא קולות קוראים לקהילת העצמאיים בקמפוס לספק את השירותים שהאגודה צורכת.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'קולות קוראים לקהילת העצמאיים',
           'חיזוק המעטפת ליזמים ועצמאיים',
           'אירועי במה פתוחה להשראה',
           'חשיפה לשיתופי פעולה בין בתי ספר'
         ],
-        color: 'from-orange-500 via-red-500 to-pink-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'career',
-        title: 'הנגשת היום שאחרי',
+        title: 'מעלים הילוך בהנגשת היום שאחרי',
         subtitle: 'התואר הוא בסיס חשוב – אבל אנחנו יודעים שזה לא נגמר שם.',
         content: 'נרחיב את שיתופי הפעולה עם בוגרים, ארגונים ומוסדות שילוו אתכם גם מעבר ללימודים. נייצר מסלולים, חיבורים ותכנים שיכינו אתכם טוב יותר לקריירה.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'הרחבת שיתופי פעולה עם בוגרים',
           'חיבורים לארגונים ומוסדות',
           'הכנה לקריירה ולעשייה',
           'אפשרויות התנסות מעשית בתעשייה'
         ],
-        color: 'from-purple-500 via-indigo-500 to-blue-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'gender',
-        title: 'ייצוג נשי',
+        title: 'מעלים הילוך בייצוג נשי',
         subtitle: 'נפעל לחיזוק הייצוג הנשי בכל דרגי האגודה.',
         content: 'נקדם מדיניות של איזון מגדרי בכל הוועדות ובפרויקטים של האגודה, ונתייחס ברצינות לצרכים הייחודיים של הסטודנטיות בקמפוס.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'חיזוק ייצוג נשי בהנהגת האגודה',
           'איזון מגדרי בוועדות ופרויקטים',
           'התייחסות לצרכים ייחודיים של סטודנטיות',
           'עידוד מנהיגות נשית בקמפוס'
         ],
-        color: 'from-pink-500 via-purple-500 to-indigo-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'academic-staff',
-        title: 'עבודה עם הסגל האקדמי',
+        title: 'מעלים הילוך בעבודה עם הסגל האקדמי',
         subtitle: 'הסדרת שגרות עבודה סדירות מול הנהלת האוניברסיטה ודיקני בתי הספר.',
         content: 'קיום שיח שוטף ומקצועי של האגודה מול ההנהלה ופלטפורמה לקידום האינטרסים שלכם, כך שנוודא שהצרכים המשתנים מקבלים מענה מדויק ואיכותי.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'קיום שיח שוטף עם ההנהלה',
           'פלטפורמה לקידום אינטרסי הסטודנטים',
           'מענה מדויק לצרכים משתנים',
           'אירועי הערכה למרצים נבחרים'
         ],
-        color: 'from-blue-500 via-cyan-500 to-teal-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'budget',
-        title: 'ניהול התקציב ושקיפות',
+        title: 'מעלים הילוך בניהול התקציב ושקיפות',
         subtitle: 'תקציב האגודה הוא של הסטודנטים – והוא צריך לעבוד בשבילם.',
         content: 'נבחן מחדש לאן הולך הכסף שלכם, ונשנה את סדרי העדיפויות. נשים דגש על מה שבאמת חשוב לכם ויעשה לכם שינוי בשטח.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'בחינה מחדש של הוצאות התקציב',
           'שינוי סדרי עדיפויות',
           'דגש על מה שחשוב לסטודנטים',
           'שקיפות גבוהה בניהול כלכלי'
         ],
-        color: 'from-green-500 via-emerald-500 to-teal-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'values',
-        title: 'ערכים ומורשת אוניברסיטת רייכמן',
+        title: 'מעלים הילוך בערכים ומורשת אוניברסיטת רייכמן',
         subtitle: 'קמפוס שבנוי על ערכים, על מוסר, על ישראליות וציונות.',
         content: 'נקים אירועים בשיתוף מטה החטופים, צעדות ואירועים לזכר הנופלים והשבויים, ניזום הרצאות של פרופ׳ אוריאל רייכמן לספר את סיפור המקום.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'אירועים בשיתוף מטה החטופים',
           'צעדות ואירועי זיכרון',
           'הרצאות של פרופ׳ אוריאל רייכמן',
           'חיזוק הערכים והאידיאולוגיה'
         ],
-        color: 'from-blue-600 via-indigo-600 to-purple-600'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'minorities',
-        title: 'ייצוג מיעוטים',
+        title: 'מעלים הילוך בייצוג מיעוטים',
         subtitle: 'נקדם את קולם ואת דרישותיהם של המיעוטים בקמפוס.',
         content: 'בחגים, מועדים, תאריכים חשובים, צרכים ובקשות. בקמפוס שלנו יש מקום לצרכים של כולם!',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'קידום קול המיעוטים',
           'התייחסות לחגים ומועדים שונים',
           'מענה לצרכים ייחודיים',
           'יצירת מקום לכל הקהלים'
         ],
-        color: 'from-purple-500 via-pink-500 to-red-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'environment',
-        title: 'שמירה על סביבה ירוקה',
+        title: 'מעלים הילוך בשמירה על סביבה ירוקה',
         subtitle: 'נפעל להפוך את האגודה והקמפוס לירוקים יותר ונגישים יותר.',
         content: 'נקדם יוזמות מחזור והפחתת שימוש בכלים חד-פעמיים בכלל אירועי האגודה, נקיים פעילויות ירוקות לאורך השנה.',
-        actions: 'מה נעשה:',
+        actions: 'איך נדאג לכן ולכם:',
         items: [
           'יוזמות מחזור בכל האירועים',
           'הפחתת שימוש בכלים חד-פעמיים',
           'פעילויות ירוקות לאורך השנה',
           'עידוד מודעות סביבתית'
         ],
-        color: 'from-green-600 via-emerald-600 to-teal-600'
+        color: 'from-blue-700 to-blue-800'
       }
     ],
 
-    ctaTitle: 'פשוט מעלים הילוך',
+    ctaTitle: 'מעלים הילוך',
     ctaText: 'אנחנו לא מבטיחים הבטחות ריקות ולא מדברים בסיסמאות. אנחנו מגיעים עם ניסיון, עם תוכנית עבודה מגובשת והכי חשוב עם רצון אמיתי לשפר את מה שצריך.',
     ctaHighlight: 'זה הזמן וההזדמנות שלכם להשפיע, לבחור באנשים שמכירים את המערכת מבפנים',
     ctaFinal: 'ניפגש בקלפי, ליד הפתק של הקמפיין הלבן!',
@@ -290,7 +287,7 @@ const content = {
     dir: 'ltr',
     lang: 'en',
     title: 'The White Campaign',
-    slogan: 'Shifting Up',
+    slogan: 'Leveling Up',
     university: 'Reichman University • Student Union',
     heroTitle: 'We Came to Work',
     heroSubtitle: 'Three years we\'ve been living the field, the campus, from the inside, really from the inside: from studies to parties, from reserves to classrooms and clubs.',
@@ -298,19 +295,19 @@ const content = {
     meetTeam: 'Meet the Team',
     teamTitle: 'The Leading Team',
     teamSubtitle: 'Leaders with experience, vision and genuine passion for change',
-    chairman: 'Chairman',
-    viceChairman: 'Vice Chairman',
+    chairman: 'Raz Ben Haim',
+    viceChairman: 'Araba Benkin Sade',
     razDetails: {
-      title: 'Raz Ben Haim',
+      title: 'Chairman',
       details: [
-        'Law MBA 3rd Year',
+        'Law Students MBA 3rd Year',
         'Clubs Department Manager',
         '"Students at the Front" Manager',
         'Rubinstein Constitutional Leadership Program'
       ]
     },
     arabaDetails: {
-      title: 'Araba Benkin Sade',
+      title: 'Vice Chairman',
       details: [
         'Communications 3rd Year',
         'Sami Ofer School of Communications Coordinator',
@@ -332,229 +329,226 @@ const content = {
     sections: [
       {
         id: 'reservists',
-        title: 'Support for Reservists',
+        title: 'Leveling Up Support for Reservists',
         subtitle: 'Military service doesn\'t end in the field – the union will be the home of reservists throughout their degree.',
         content: 'Raz serves as manager at "Students at the Front" organization established at the beginning of the war and took part in formulating the first reservists framework written at the national level. Meanwhile, he initiated and established the "Reichman Reservists" group, coordinated hundreds of inquiries from students serving on all fronts, and met with the university president to reflect the real needs that emerged from the field.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Student summaries and lecturer updates with personal attention',
           'Personal mentoring for track members and academic assistance',
           'Connection to psychological care and processing',
           'Direct and accessible contact with deans'
         ],
-        color: 'from-blue-500 via-blue-600 to-blue-700'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'fun',
-        title: 'Fun and Campus Atmosphere',
+        title: 'Leveling Up Fun and Campus Atmosphere',
         subtitle: 'Reichman students don\'t need a reason to party – we simply deserve to enjoy.',
         content: 'We\'ll bring back the legendary atmosphere of "The Interdisciplinary" with parties that will remind you why you\'re here (and it\'s not just for the degree...). Performances, events, bonding activities, fairs and festivals that will connect students to the amazing and diverse community.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Performances and bonding events',
           'Festivals and fairs',
           'Drive-in movie screenings',
           'Food festivals',
-          'Peak events throughout the academic year'
-        ],
-        promises: 'Promises:',
-        commitments: [
+          'Peak events throughout the academic year',
           'Fair treatment between supply and demand in ticket sales',
           'Events for all audiences: Israelis, internationals',
           'No queues and pressure',
           'Accessibility and availability for all students'
         ],
-        color: 'from-purple-500 via-pink-500 to-purple-600'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'networking',
-        title: 'Networking and Reichman Community',
+        title: 'Leveling Up Networking and Reichman Community',
         subtitle: 'Networking is one of the unique resources of Reichman University!',
         content: 'Our goal is to create a strong and cohesive community that cares for today\'s students and alumni. We will work to connect different students on campus, from different schools and different years.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Think tanks and hosting meetings between schools',
           'Collaborations and connections between students',
           'Sense of belonging and friends from all departments',
           'Becoming the most united and strongest campus in Israel'
         ],
-        color: 'from-cyan-500 via-blue-500 to-indigo-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'rights',
-        title: 'Student Rights',
+        title: 'Leveling Up Student Rights',
         subtitle: 'Delayed assignments? Rights violated? You have one clear address.',
-        content: 'Araba has three years of experience as a representative and one year as academic coordinator – she knows the system, the solutions, and the way to get things done.',
-        actions: 'What We\'ll Do:',
+        content: 'Araba has three years of experience as a representative and one year as academic coordinator – she knows the system, the solutions, and the way to get things done. We are here to ensure that your rights are respected and that you receive what you deserve.',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Strengthening track representatives and coordinators',
           'Building an effective academic forum',
           'Quick and accurate response to every inquiry',
           'Handling delays and examining exceptions'
         ],
-        color: 'from-green-500 via-emerald-500 to-green-600'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'smart-campus',
-        title: 'Smart and Accessible Campus',
+        title: 'Leveling Up Smart and Accessible Campus',
         subtitle: 'No more searching for an empty classroom!',
         content: 'We will launch a smart system that will reflect available classrooms and learning spaces in real time – throughout the year, and especially during exam periods.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Smart system for available classrooms in real time',
           'Ability to book classrooms in advance',
           'Comprehensive study database with summaries from all schools',
           'Everything in one place, convenient and accessible'
         ],
-        color: 'from-teal-500 via-cyan-500 to-blue-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'international',
-        title: 'International School',
+        title: 'Leveling Up International School',
         subtitle: 'The International School should be involved in welfare and atmosphere, in community and spirit of the place.',
         content: 'We will establish a special position for a representative from the International School in the union management, whose purpose will be to reflect the student needs.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Special representation in union management',
           'Real-time reflection of student needs',
           'Adapting events to all audiences',
           'Real-time handling of problems and demands'
         ],
-        color: 'from-indigo-500 via-purple-500 to-pink-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'wellness',
-        title: 'Campus Welfare',
+        title: 'Leveling Up Campus Welfare',
         subtitle: 'The campus is our home – and we are here to make it better.',
         content: 'We will restore what worked, strengthen what is needed, and upgrade what is possible – from classrooms and libraries, through sports and recreation, to dormitories and daily life. And yes, the cafeteria will finally get an answer.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Improving classrooms and libraries',
           'Upgrading sports and recreation',
           'Improving dormitories and daily life',
           'Solving the cafeteria problem'
         ],
-        color: 'from-teal-500 via-emerald-500 to-green-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'entrepreneurship',
-        title: 'Entrepreneurship and Support for Independent Students',
+        title: 'Leveling Up Entrepreneurship and Support for Independent Students',
         subtitle: 'There are quite a few students who don\'t just study – but also build, create and lead.',
         content: 'We want to see them getting more space, more connections and more opportunities. We will issue calls for the independent community on campus to provide the services that the union consumes.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Calls for the independent community',
           'Strengthening the framework for entrepreneurs and independents',
           'Open stage events for inspiration',
           'Exposure to collaborations between schools'
         ],
-        color: 'from-orange-500 via-red-500 to-pink-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'career',
-        title: 'Making the Day After Accessible',
+        title: 'Leveling Up Making the Day After Accessible',
         subtitle: 'The degree is an important foundation – but we know it doesn\'t end there.',
         content: 'We will expand collaborations with alumni, organizations and institutions that will accompany you beyond studies. We will create tracks, connections and content that will better prepare you for career.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Expanding collaborations with alumni',
           'Connections to organizations and institutions',
           'Preparation for career and action',
           'Practical experience opportunities in industry'
         ],
-        color: 'from-purple-500 via-indigo-500 to-blue-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'gender',
-        title: 'Female Representation',
+        title: 'Leveling Up Female Representation',
         subtitle: 'We will work to strengthen female representation at all levels of the union.',
         content: 'We will promote a policy of gender balance in all committees and union projects, and seriously address the unique needs of female students on campus.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Strengthening female representation in union leadership',
           'Gender balance in committees and projects',
           'Addressing unique needs of female students',
           'Encouraging female leadership on campus'
         ],
-        color: 'from-pink-500 via-purple-500 to-indigo-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'academic-staff',
-        title: 'Working with Academic Staff',
+        title: 'Leveling Up Working with Academic Staff',
         subtitle: 'Establishing regular work routines with university management and school deans.',
         content: 'Maintaining ongoing and professional dialogue between the union and management and a platform for promoting your interests, ensuring that changing needs receive accurate and quality response.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Maintaining ongoing dialogue with management',
           'Platform for promoting student interests',
           'Accurate response to changing needs',
           'Recognition events for selected lecturers'
         ],
-        color: 'from-blue-500 via-cyan-500 to-teal-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'budget',
-        title: 'Budget Management and Transparency',
+        title: 'Leveling Up Budget Management and Transparency',
         subtitle: 'The union budget belongs to the students – and it should work for them.',
         content: 'We will re-examine where your money goes, and change the order of priorities. We will emphasize what is really important to you and will make a difference in the field.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Re-examining budget expenditures',
           'Changing order of priorities',
           'Emphasis on what matters to students',
           'High transparency in financial management'
         ],
-        color: 'from-green-500 via-emerald-500 to-teal-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'values',
-        title: 'Values and Heritage of Reichman University',
+        title: 'Leveling Up Values and Heritage of Reichman University',
         subtitle: 'A campus built on values, morality, Israeliness and Zionism.',
         content: 'We will establish events in collaboration with the hostages headquarters, marches and memorial events for the fallen and captives, initiate lectures by Prof. Uriel Reichman to tell the story of the place.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Events in collaboration with hostages headquarters',
           'Marches and memorial events',
           'Lectures by Prof. Uriel Reichman',
           'Strengthening values and ideology'
         ],
-        color: 'from-blue-600 via-indigo-600 to-purple-600'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'minorities',
-        title: 'Minority Representation',
+        title: 'Leveling Up Minority Representation',
         subtitle: 'We will promote the voice and demands of minorities on campus.',
         content: 'In holidays, occasions, important dates, needs and requests. Our campus has room for everyone\'s needs!',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Promoting minority voices',
           'Addressing different holidays and occasions',
           'Response to unique needs',
           'Creating space for all audiences'
         ],
-        color: 'from-purple-500 via-pink-500 to-red-500'
+        color: 'from-blue-700 to-blue-800'
       },
       {
         id: 'environment',
-        title: 'Protecting Green Environment',
+        title: 'Leveling Up Protecting Green Environment',
         subtitle: 'We will work to make the union and campus greener and more accessible.',
         content: 'We will promote recycling initiatives and reducing the use of disposable items in all union events, hold green activities throughout the year.',
-        actions: 'What We\'ll Do:',
+        actions: 'How We\'ll Take Care of You:',
         items: [
           'Recycling initiatives in all events',
           'Reducing use of disposable items',
           'Green activities throughout the year',
           'Encouraging environmental awareness'
         ],
-        color: 'from-green-600 via-emerald-600 to-teal-600'
+        color: 'from-blue-700 to-blue-800'
       }
     ],
 
-    ctaTitle: 'Simply Shifting Up',
+    ctaTitle: 'Leveling Up',
     ctaText: 'We don\'t make empty promises and don\'t speak in slogans. We come with experience, with a consolidated work plan and most importantly with a genuine desire to improve what needs to be improved.',
     ctaHighlight: 'This is your time and opportunity to make an impact, to choose people who know the system from the inside',
     ctaFinal: 'See you at the polls, next to the White Campaign ballot!',
-    ctaButton: 'Let\'s Shift Up Together!',
+    ctaButton: 'Let\'s Level Up Together!',
     footerText: 'We came to work for you with full transparency and for those who really matter – you.',
     accessibility: {
       title: 'Accessibility Tools',
@@ -581,6 +575,15 @@ export default function Campaign() {
 
   useEffect(() => {
     setIsLoaded(true);
+    
+    // Add Rubik font
+    const linkElement = document.createElement('link');
+    linkElement.href = 'https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap';
+    linkElement.rel = 'stylesheet';
+    document.head.appendChild(linkElement);
+    
+    // Apply Rubik font to body
+    document.body.style.fontFamily = 'Rubik, sans-serif';
     
     // Check for user motion preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -617,6 +620,10 @@ export default function Campaign() {
     return () => {
       observer.disconnect();
       document.removeEventListener('keydown', handleKeyDown);
+      // Clean up font when component unmounts
+      if (linkElement && linkElement.parentNode) {
+        linkElement.parentNode.removeChild(linkElement);
+      }
     };
   }, [language, t.lang, t.dir]);
 
@@ -666,44 +673,65 @@ export default function Campaign() {
   return (
     <>
       <style jsx>{`
+        * {
+          font-family: 'Rubik', sans-serif !important;
+        }
+        
+        /* Plus pattern background - Simple plus pattern */
+        .plus-pattern {
+          background-image: 
+            linear-gradient(90deg, #C6E5F3 1px, transparent 1px),
+            linear-gradient(180deg, #C6E5F3 1px, transparent 1px);
+          background-size: 20px 20px;
+          background-position: 0 0;
+        }
+        
+        .plus-pattern::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-image: 
+            linear-gradient(90deg, transparent 9px, #C6E5F3 9px, #C6E5F3 11px, transparent 11px),
+            linear-gradient(180deg, transparent 9px, #C6E5F3 9px, #C6E5F3 11px, transparent 11px);
+          background-size: 20px 20px;
+          opacity: 0.4;
+          pointer-events: none;
+        }
+        
         @keyframes float {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
-          33% { transform: translateY(-20px) rotate(1deg); }
-          66% { transform: translateY(-10px) rotate(-1deg); }
+          33% { transform: translateY(-15px) rotate(0.5deg); }
+          66% { transform: translateY(-8px) rotate(-0.5deg); }
         }
         
-        @keyframes pulse-glow {
-          0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
-          50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
-        }
-        
-        @keyframes gradient-shift {
-          0% { background-position: 0% 50%; }
-          50% { background-position: 100% 50%; }
-          100% { background-position: 0% 50%; }
+        @keyframes glow-white {
+          0%, 100% { 
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 
+                        0 0 20px rgba(255, 255, 255, 0.6),
+                        0 0 30px rgba(255, 255, 255, 0.4); 
+          }
+          50% { 
+            text-shadow: 0 0 20px rgba(255, 255, 255, 1), 
+                        0 0 40px rgba(255, 255, 255, 0.8),
+                        0 0 60px rgba(255, 255, 255, 0.6); 
+          }
         }
         
         .animate-float {
           animation: ${reducedMotion ? 'none' : 'float 6s ease-in-out infinite'};
         }
         
-        .animate-pulse-glow {
-          animation: ${reducedMotion ? 'none' : 'pulse-glow 2s ease-in-out infinite'};
-        }
-        
-        .animate-gradient {
-          background-size: 400% 400%;
-          animation: ${reducedMotion ? 'none' : 'gradient-shift 8s ease infinite'};
+        .glow-white {
+          animation: ${reducedMotion ? 'none' : 'glow-white 3s ease-in-out infinite'};
         }
         
         .glass-effect {
           background: rgba(255, 255, 255, 0.1);
-          backdrop-filter: blur(20px);
+          backdrop-filter: blur(15px);
           border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .text-glow {
-          text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
         }
         
         .card-hover {
@@ -711,8 +739,8 @@ export default function Campaign() {
         }
         
         .card-hover:hover {
-          transform: ${reducedMotion ? 'none' : 'translateY(-10px) scale(1.02)'};
-          box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+          transform: ${reducedMotion ? 'none' : 'translateY(-5px)'};
+          box-shadow: 0 15px 30px rgba(31, 57, 110, 0.1);
         }
         
         /* Font size classes */
@@ -730,39 +758,45 @@ export default function Campaign() {
           border: 2px solid #ffffff;
         }
         
+        /* Updated Color variables */
+        .color-primary { color: #1F396E; }
+        .bg-primary { background-color: #1F396E; }
+        .color-light-teal { color: #C6E5F3; }
+        .bg-light-teal { background-color: #C6E5F3; }
+        .color-medium-teal { color: #BFE7F5; }
+        .bg-medium-teal { background-color: #BFE7F5; }
+        .color-medium-blue { color: #4A90E2; }
+        .bg-medium-blue { background-color: #4A90E2; }
+        .color-dark { color: #1A1A1A; }
+        .bg-dark { background-color: #1A1A1A; }
+        
         /* Mobile text contrast improvements */
         @media (max-width: 768px) {
           .platform-text {
-            color: #000000 !important;
+            color: #1F396E !important;
             font-weight: 700 !important;
           }
           
           .platform-subtitle {
-            color: #000000 !important;
+            color: #1A1A1A !important;
             font-weight: 800 !important;
           }
           
           .platform-content {
-            color: #1a1a1a !important;
+            color: #1A1A1A !important;
             font-weight: 600 !important;
           }
           
           .platform-items {
-            color: #000080 !important;
-            font-weight: 700 !important;
-          }
-          
-          .platform-commitments {
-            color: #006400 !important;
+            color: #1F396E !important;
             font-weight: 700 !important;
           }
           
           .platform-background {
             background: rgba(255, 255, 255, 1) !important;
-            border: 2px solid #e5e7eb !important;
+            border: 2px solid #C6E5F3 !important;
           }
           
-          /* Force platform section to be always visible on mobile */
           .platform-section {
             opacity: 1 !important;
             transform: translateY(0) !important;
@@ -775,13 +809,11 @@ export default function Campaign() {
             transition: none !important;
           }
           
-          /* Ensure all sections are always visible on mobile */
           section[data-animate] {
             opacity: 1 !important;
             transform: translateY(0) !important;
           }
           
-          /* Force all cards to be visible */
           .card-hover {
             opacity: 1 !important;
             transform: translateY(0) !important;
@@ -790,7 +822,7 @@ export default function Campaign() {
         
         /* Focus styles */
         .focus-visible:focus {
-          outline: 3px solid #3b82f6;
+          outline: 3px solid #4A90E2;
           outline-offset: 2px;
         }
         
@@ -799,7 +831,7 @@ export default function Campaign() {
           position: absolute;
           top: -40px;
           ${language === 'he' ? 'left: 6px' : 'right: 6px'};
-          background: #000;
+          background: #1F396E;
           color: #fff;
           padding: 8px;
           text-decoration: none;
@@ -830,7 +862,8 @@ export default function Campaign() {
         {/* Toggle Button */}
         <button
           onClick={() => setShowAccessibilityToolbar(!showAccessibilityToolbar)}
-          className="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full shadow-lg mb-2 focus-visible touch-manipulation"
+          className="text-white p-3 rounded-full shadow-lg mb-2 focus-visible touch-manipulation"
+          style={{ backgroundColor: '#4A90E2' }}
           aria-label={showAccessibilityToolbar ? 'סגור כלי נגישות' : 'פתח כלי נגישות'}
           aria-expanded={showAccessibilityToolbar}
         >
@@ -839,16 +872,17 @@ export default function Campaign() {
 
         {/* Toolbar Content */}
         <div 
-          className={`bg-white/95 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-lg border transition-all duration-300 transform ${
+          className={`bg-white/95 backdrop-blur-sm p-3 md:p-4 rounded-lg shadow-lg transition-all duration-300 transform ${
             showAccessibilityToolbar 
               ? 'opacity-100 translate-y-0 scale-100' 
               : 'opacity-0 -translate-y-4 scale-95 pointer-events-none'
           } max-w-[280px] sm:max-w-none`}
+          style={{ border: '1px solid #C6E5F3' }}
           role="toolbar"
           aria-label={t.accessibility.title}
           aria-hidden={!showAccessibilityToolbar}
         >
-          <h3 className="text-xs md:text-sm font-bold mb-2 text-gray-800">{t.accessibility.title}</h3>
+          <h3 className="text-xs md:text-sm font-bold mb-2" style={{ color: '#1F396E' }}>{t.accessibility.title}</h3>
           <div className="flex flex-col gap-2">
             <div className="flex gap-1 md:gap-2">
               <Button
@@ -857,6 +891,7 @@ export default function Campaign() {
                 onClick={increaseFontSize}
                 aria-label={t.accessibility.increaseFont}
                 className="p-2 min-w-[40px] touch-manipulation text-xs"
+                style={{ borderColor: '#C6E5F3', color: '#1F396E' }}
               >
                 <Plus className="w-3 h-3 md:w-4 md:h-4" />
                 <span className="sr-only">{t.accessibility.increaseFont}</span>
@@ -867,6 +902,7 @@ export default function Campaign() {
                 onClick={decreaseFontSize}
                 aria-label={t.accessibility.decreaseFont}
                 className="p-2 min-w-[40px] touch-manipulation text-xs"
+                style={{ borderColor: '#C6E5F3', color: '#1F396E' }}
               >
                 <Minus className="w-3 h-3 md:w-4 md:h-4" />
                 <span className="sr-only">{t.accessibility.decreaseFont}</span>
@@ -878,6 +914,7 @@ export default function Campaign() {
               onClick={toggleHighContrast}
               aria-label={highContrast ? t.accessibility.normalContrast : t.accessibility.highContrast}
               className="flex items-center gap-1 md:gap-2 text-xs p-2 touch-manipulation"
+              style={{ borderColor: '#C6E5F3', color: '#1F396E' }}
             >
               {highContrast ? <EyeOff className="w-3 h-3 md:w-4 md:h-4" /> : <Eye className="w-3 h-3 md:w-4 md:h-4" />}
               <span className="text-[10px] md:text-xs leading-tight">
@@ -890,6 +927,7 @@ export default function Campaign() {
               onClick={toggleLanguage}
               aria-label={language === 'he' ? 'Switch to English' : 'עבור לעברית'}
               className="flex items-center gap-1 md:gap-2 text-xs p-2 touch-manipulation"
+              style={{ borderColor: '#C6E5F3', color: '#1F396E' }}
             >
               <Languages className="w-3 h-3 md:w-4 md:h-4" />
               <span className="text-[10px] md:text-xs leading-tight">
@@ -901,187 +939,218 @@ export default function Campaign() {
       </div>
 
       <div 
-        className={`min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-blue-100 font-${fontSize} ${highContrast ? 'high-contrast' : ''}`} 
+        className={`min-h-screen plus-pattern font-${fontSize} ${highContrast ? 'high-contrast' : ''} relative`} 
         dir={t.dir}
         lang={t.lang}
+        style={{ 
+          fontFamily: 'Rubik, sans-serif',
+          backgroundColor: '#FFFFFF'
+        }}
       >
-        {/* Floating Background Elements */}
-        <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-          <div className="absolute top-20 right-20 w-32 h-32 bg-gradient-to-br from-blue-300/30 to-indigo-300/30 rounded-full animate-float blur-xl"></div>
-          <div className="absolute bottom-20 left-20 w-24 h-24 bg-gradient-to-br from-indigo-300/30 to-blue-300/30 rounded-full animate-float blur-xl" style={{animationDelay: '2s'}}></div>
-          <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-gradient-to-br from-blue-200/30 to-indigo-200/30 rounded-full animate-float blur-lg" style={{animationDelay: '4s'}}></div>
-        </div>
-
         {/* Main Content */}
         <main id="main-content" tabIndex="-1">
-          {/* Hero Section with Main Photo */}
+          {/* Hero Section - Updated Layout */}
           <section 
             className="relative min-h-screen flex items-center justify-center overflow-hidden"
+            style={{ background: 'linear-gradient(135deg, #1F396E 0%, #4A90E2 100%)' }}
             aria-labelledby="hero-title"
             role="banner"
           >
-            {/* Background with main team photo */}
-            <div className="absolute inset-0" aria-hidden="true">
-              <div className="relative w-full h-full">
-                <img 
-                  src="/images/team-photo.jpg" 
-                  alt="רז בן חיים וערבה בנקין שדה, מועמדי הקמפיין הלבן לאגודת הסטודנטים באוניברסיטת רייכמן" 
-                  className="w-full h-full object-cover object-center"
-                  onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextElementSibling.style.display = 'block';
-                  }}
-                />
-                <div 
-                  className="w-full h-full bg-gradient-to-br from-blue-600/90 via-indigo-700/80 to-purple-800/90 flex items-center justify-center"
-                  style={{display: 'none'}}
-                >
-                  <div className="text-center text-white">
-                    <div className="flex gap-8 mb-8 justify-center">
-                      <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center animate-float" aria-hidden="true">
-                        <Users className="w-16 h-16" />
-                      </div>
-                      <div className="w-32 h-32 bg-white/20 rounded-full flex items-center justify-center animate-float" style={{animationDelay: '1s'}} aria-hidden="true">
-                        <Star className="w-16 h-16" />
+            {/* Content and Image Layout */}
+            <div className="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center relative z-10 min-h-screen">
+              
+              {/* Content Side */}
+              <div className={`text-center lg:text-${language === 'he' ? 'right' : 'left'} lg:order-${language === 'he' ? '2' : '1'} flex flex-col justify-center`}>
+                {/* Logo/Title */}
+                <header className="mb-8">
+                  <h1 
+                    id="hero-title"
+                    className="text-4xl sm:text-6xl md:text-7xl font-black text-white mb-6 leading-tight glow-white"
+                    style={{ fontFamily: 'Rubik, sans-serif' }}
+                  >
+                    {t.title}
+                  </h1>
+                  <div className="flex items-center justify-center gap-3 sm:gap-4 mb-6" role="img" aria-label="סלוגן הקמפיין">
+                    <div className="h-1 w-16 sm:w-20 bg-gradient-to-r from-transparent to-white rounded-full" aria-hidden="true"></div>
+                    <div className="flex items-center justify-center">
+                      <Badge className="text-lg sm:text-xl px-6 sm:px-8 py-3 sm:py-4 bg-white/20 text-white border-white/30 glass-effect flex items-center" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                        <Plus className="w-5 h-5 sm:w-6 sm:h-6 ml-2 sm:ml-3" aria-hidden="true" />
+                        {t.slogan}
+                      </Badge>
+                    </div>
+                    <div className="h-1 w-16 sm:w-20 bg-gradient-to-l from-transparent to-white rounded-full" aria-hidden="true"></div>
+                  </div>
+                  <p className="text-base sm:text-lg md:text-xl text-white font-medium opacity-90" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                    {t.university}
+                  </p>
+                </header>
+
+                {/* Main Message */}
+                <section className="glass-effect rounded-2xl p-6 sm:p-8 mb-8" aria-labelledby="main-message">
+                  <h2 
+                    id="main-message"
+                    className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 leading-tight"
+                    style={{ fontFamily: 'Rubik, sans-serif' }}
+                  >
+                    {t.heroTitle} <span style={{ color: '#1F396E' }}>
+                      {language === 'he' ? 'בשבילכם' : 'for You'}
+                    </span>
+                  </h2>
+                  <p className="text-sm sm:text-base md:text-lg text-white leading-relaxed opacity-90" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                    {t.heroSubtitle}
+                  </p>
+                </section>
+
+                {/* Action Buttons */}
+                <nav className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center" aria-label="ניווט עיקרי">
+                  <Button 
+                    size="lg" 
+                    className="bg-white text-lg px-8 py-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 focus-visible w-full sm:w-auto"
+                    style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}
+                    onClick={() => scrollToSection('platform')}
+                    aria-describedby="platform-description"
+                  >
+                    <Sparkles className={`${language === 'he' ? 'ml-2' : 'mr-2'} h-5 w-5`} aria-hidden="true" />
+                    {t.readPlatform}
+                  </Button>
+                  <div id="platform-description" className="sr-only">עבור לקריאת המצע המפורט של הקמפיין</div>
+                
+                  <Button 
+                    variant="outline" 
+                    size="lg"
+                    className="glass-effect text-white border-white/30 hover:bg-white/20 text-lg px-8 py-5 rounded-xl transition-all duration-300 focus-visible w-full sm:w-auto"
+                    onClick={() => scrollToSection('team')}
+                    aria-describedby="team-description"
+                    style={{ fontFamily: 'Rubik, sans-serif' }}
+                  >
+                    {t.meetTeam}
+                  </Button>
+                  <div id="team-description" className="sr-only">עבור להכרת צוות הקמפיין</div>
+                </nav>
+              </div>
+
+              {/* Image Side - Much Larger and Improved */}
+              <div className={`lg:order-${language === 'he' ? '1' : '2'} flex justify-center lg:justify-${language === 'he' ? 'start' : 'end'}`}>
+                <div className="relative w-full max-w-lg lg:max-w-2xl">
+                  <div className="aspect-square w-full relative">
+                    {/* Enhanced glow effect */}
+                    <div className="absolute inset-0 rounded-full blur-2xl opacity-60" style={{ background: 'linear-gradient(45deg, #C6E5F3, #4A90E2, #1F396E)' }} aria-hidden="true"></div>
+                    <div className="absolute inset-2 rounded-full blur-xl opacity-40" style={{ background: 'linear-gradient(135deg, #BFE7F5, #C6E5F3)' }} aria-hidden="true"></div>
+                    
+                    {/* Main image container with enhanced styling */}
+                    <div className="absolute inset-4 bg-white rounded-full overflow-hidden shadow-2xl" style={{ 
+                      boxShadow: '0 25px 50px rgba(31, 57, 110, 0.3), 0 0 0 4px rgba(198, 229, 243, 0.3), 0 0 0 8px rgba(198, 229, 243, 0.1)' 
+                    }}>
+                      <img 
+                        src="/images/team-photo.jpg" 
+                        alt="רז בן חיים וערבה בנקין שדה, מועמדי הקמפיין הלבן לאגודת הסטודנטים באוניברסיטת רייכמן" 
+                        className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                        onError={(e) => {
+                          e.target.style.display = 'none';
+                          e.target.nextElementSibling.style.display = 'flex';
+                        }}
+                      />
+                      <div 
+                        className="w-full h-full flex items-center justify-center flex-col"
+                        style={{display: 'none', background: 'linear-gradient(135deg, #C6E5F3, #BFE7F5)'}}
+                      >
+                        <div className="flex gap-8 mb-8">
+                          <div className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)' }} aria-hidden="true">
+                            <Users className="w-12 h-12 text-white" />
+                          </div>
+                          <div className="w-24 h-24 rounded-full flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #1F396E, #4A90E2)' }} aria-hidden="true">
+                            <Star className="w-12 h-12 text-white" />
+                          </div>
+                        </div>
+                        <p className="text-3xl font-bold text-center px-8 leading-tight" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>
+                          רז וערבה<br />
+                          <span className="text-xl font-semibold" style={{ color: '#4A90E2' }}>הקמפיין הלבן</span>
+                        </p>
                       </div>
                     </div>
-                    <p className="text-2xl font-bold">תמונת הצוות תתווסף בקרוב</p>
+                    
+                    {/* Floating elements around the image */}
+                    <div className="absolute top-4 right-4 w-6 h-6 rounded-full animate-float" style={{ background: '#C6E5F3', animationDelay: '0s' }} aria-hidden="true"></div>
+                    <div className="absolute bottom-8 left-8 w-4 h-4 rounded-full animate-float" style={{ background: '#4A90E2', animationDelay: '2s' }} aria-hidden="true"></div>
+                    <div className="absolute top-1/2 right-0 w-3 h-3 rounded-full animate-float" style={{ background: '#1F396E', animationDelay: '4s' }} aria-hidden="true"></div>
                   </div>
                 </div>
-                
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-900/70 via-indigo-900/60 to-purple-900/70" aria-hidden="true"></div>
               </div>
             </div>
 
-            {/* Hero Content */}
-            <div className={`relative z-10 max-w-6xl mx-auto px-4 text-center transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-              {/* Logo/Title with glow effect */}
-              <header className="mb-8">
-                <h1 
-                  id="hero-title"
-                  className="text-4xl sm:text-6xl md:text-8xl font-black text-white text-glow mb-4 leading-tight"
-                >
-                  {t.title}
-                </h1>
-                <div className="flex items-center justify-center gap-2 sm:gap-4 mb-6" role="img" aria-label="סלוגן הקמפיין">
-                  <div className="h-1 w-12 sm:w-20 bg-gradient-to-r from-transparent to-white rounded-full" aria-hidden="true"></div>
-                  <Badge className="text-lg sm:text-xl px-4 sm:px-6 py-2 sm:py-3 bg-white/20 text-white border-white/30 glass-effect animate-pulse-glow">
-                    <Plus className="w-4 h-4 sm:w-5 sm:h-5 ml-1 sm:ml-2" aria-hidden="true" />
-                    {t.slogan}
-                  </Badge>
-                  <div className="h-1 w-12 sm:w-20 bg-gradient-to-l from-transparent to-white rounded-full" aria-hidden="true"></div>
-                </div>
-                <p className="text-lg sm:text-2xl md:text-3xl text-blue-100 font-medium px-4">
-                  {t.university}
-                </p>
-              </header>
-
-              {/* Main Message */}
-              <section className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-12 mb-8 glass-effect mx-4 sm:mx-0" aria-labelledby="main-message">
-                <h2 
-                  id="main-message"
-                  className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 leading-tight"
-                >
-                  {t.heroTitle} <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                    {language === 'he' ? 'בשבילכם' : 'for You'}
-                  </span>
-                </h2>
-                <p className="text-base sm:text-xl md:text-2xl text-blue-100 leading-relaxed max-w-4xl mx-auto px-4 sm:px-0">
-                  {t.heroSubtitle}
-                </p>
-              </section>
-
-              {/* Action Buttons */}
-              <nav className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4" aria-label="ניווט עיקרי">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-to-r from-white to-blue-50 text-blue-800 hover:from-blue-50 hover:to-white text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-1 animate-pulse-glow focus-visible w-full sm:w-auto"
-                  onClick={() => scrollToSection('platform')}
-                  aria-describedby="platform-description"
-                >
-                  <Sparkles className={`${language === 'he' ? 'ml-2 sm:ml-3' : 'mr-2 sm:mr-3'} h-5 w-5 sm:h-6 sm:w-6`} aria-hidden="true" />
-                  {t.readPlatform}
-                  <ArrowRight className={`${language === 'he' ? 'mr-2 sm:mr-3' : 'ml-2 sm:ml-3'} h-5 w-5 sm:h-6 sm:w-6`} aria-hidden="true" />
-                </Button>
-                <div id="platform-description" className="sr-only">עבור לקריאת המצע המפורט של הקמפיין</div>
-              
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="glass-effect text-white border-white/30 hover:bg-white/20 text-lg sm:text-xl px-8 sm:px-10 py-5 sm:py-6 rounded-2xl transition-all duration-300 focus-visible w-full sm:w-auto"
-                  onClick={() => scrollToSection('team')}
-                  aria-describedby="team-description"
-                >
-                  {t.meetTeam}
-                </Button>
-                <div id="team-description" className="sr-only">עבור להכרת צוות הקמפיין</div>
-              </nav>
-
-              {/* Scroll Indicator */}
-              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
-                <ChevronDown className="h-8 w-8 text-white/70" />
-              </div>
+            {/* Scroll Indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
+              <ChevronDown className="h-6 w-6 text-white/70" />
             </div>
           </section>
 
           {/* Team Section */}
           <section 
             id="team" 
-            className="py-20 bg-gradient-to-b from-white to-indigo-50" 
+            className="py-20 bg-white relative" 
             data-animate
             aria-labelledby="team-title"
             tabIndex="-1"
           >
+            {/* Decorative top border */}
+            <div className="absolute top-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(to right, #C6E5F3, #4A90E2, #1F396E)' }}></div>
+            
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto opacity-100 translate-y-0">
                 <header className="text-center mb-16">
+                  <div className="mb-6">
+                    <Badge className="text-lg px-6 py-3 mb-4" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)', color: 'white', fontFamily: 'Rubik, sans-serif' }}>
+                      <Users className="w-5 h-5 ml-2" />
+                      צוות
+                    </Badge>
+                  </div>
                   <h2 
                     id="team-title"
-                    className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent mb-4 px-4"
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4"
+                    style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}
                   >
                     {t.teamTitle}
                   </h2>
-                  <div className="w-32 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 mx-auto rounded-full mb-6" aria-hidden="true"></div>
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
+                  <div className="w-32 h-1 mx-auto rounded-full mb-6" style={{ background: 'linear-gradient(to right, #4A90E2, #1F396E)' }} aria-hidden="true"></div>
+                  <p className="text-lg sm:text-xl max-w-2xl mx-auto px-4" style={{ color: '#1A1A1A', fontFamily: 'Rubik, sans-serif' }}>
                     {t.teamSubtitle}
                   </p>
                 </header>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto px-4">
                   {/* Raz */}
-                  <article className="card-hover bg-gradient-to-br from-blue-50 to-indigo-100 border-0 shadow-xl overflow-hidden">
+                  <article className="card-hover bg-white overflow-hidden rounded-2xl" style={{ border: '2px solid #C6E5F3', boxShadow: '0 4px 16px rgba(31, 57, 110, 0.1)' }}>
                     <Card>
                       <CardHeader className="text-center p-6 sm:p-8">
                         <div className="relative mb-6">
                           <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto relative">
-                            <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full animate-pulse-glow" aria-hidden="true"></div>
+                            <div className="absolute inset-0 rounded-full" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)' }} aria-hidden="true"></div>
                             <div className="absolute inset-2 bg-white rounded-full overflow-hidden">
                               <img 
                                 src="/images/raz-ben-haim.jpg" 
-                                alt={`תמונה של ${t.razDetails.title}, מועמד ליו״ר הקמפיין הלבן`}
+                                alt={`תמונה של ${t.chairman}, מועמד ליו״ר הקמפיין הלבן`}
                                 className="w-full h-full object-cover"
                                 onError={(e) => {
                                   e.target.style.display = 'none';
                                   e.target.nextElementSibling.style.display = 'flex';
                                 }}
                               />
-                              <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center" style={{display: 'none'}}>
-                                <Users className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600" aria-hidden="true" />
+                              <div className="w-full h-full flex items-center justify-center" style={{display: 'none', background: 'linear-gradient(135deg, #C6E5F3, #4A90E2)'}}>
+                                <Users className="w-12 h-12 sm:w-16 sm:h-16" style={{ color: '#1F396E' }} aria-hidden="true" />
                               </div>
                             </div>
                           </div>
                         </div>
-                        <CardTitle className="text-2xl sm:text-3xl text-blue-800 mb-3">{t.razDetails.title}</CardTitle>
-                        <Badge className="bg-gradient-to-r from-blue-500 to-blue-600 text-white text-base sm:text-lg px-4 sm:px-6 py-2 rounded-full">
-                          {t.chairman}
+                        <CardTitle className="text-2xl sm:text-3xl mb-3" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>{t.chairman}</CardTitle>
+                        <Badge className="text-base sm:text-lg px-4 sm:px-6 py-2 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)', fontFamily: 'Rubik, sans-serif' }}>
+                          {t.razDetails.title}
                         </Badge>
                       </CardHeader>
                       <CardContent className="p-6 sm:p-8 pt-0">
-                        <div className="space-y-3" role="list" aria-label={`פרטי ${t.razDetails.title}`}>
+                        <div className="space-y-3" role="list" aria-label={`פרטי ${t.chairman}`}>
                           {t.razDetails.details.map((detail, index) => (
-                            <div key={index} className="bg-white/90 p-3 sm:p-4 rounded-xl border border-blue-100" role="listitem">
-                              <p className="font-semibold text-blue-900 text-sm sm:text-base">{detail}</p>
+                            <div key={index} className="p-3 sm:p-4 rounded-xl" style={{ backgroundColor: '#C6E5F3', border: '1px solid #4A90E2' }} role="listitem">
+                              <p className="font-semibold text-sm sm:text-base" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>{detail}</p>
                             </div>
                           ))}
                         </div>
@@ -1090,38 +1159,38 @@ export default function Campaign() {
                   </article>
 
                   {/* Araba */}
-                  <article className="card-hover bg-gradient-to-br from-pink-50 to-purple-100 border-0 shadow-xl overflow-hidden">
+                  <article className="card-hover bg-white overflow-hidden rounded-2xl" style={{ border: '2px solid #C6E5F3', boxShadow: '0 4px 16px rgba(31, 57, 110, 0.1)' }}>
                     <Card>
                       <CardHeader className="text-center p-6 sm:p-8">
                         <div className="relative mb-6">
                           <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto relative">
-                            <div className="absolute inset-0 bg-gradient-to-br from-pink-400 to-purple-600 rounded-full animate-pulse-glow" aria-hidden="true"></div>
+                            <div className="absolute inset-0 rounded-full" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)' }} aria-hidden="true"></div>
                             <div className="absolute inset-2 bg-white rounded-full overflow-hidden">
                               <img 
                                 src="/images/araba-benkin-sade.jpg" 
-                                alt={`תמונה של ${t.arabaDetails.title}, מועמדת לסגנית יו״ר הקמפיין הלבן`}
+                                alt={`תמונה של ${t.viceChairman}, מועמדת לסגנית יו״ר הקמפיין הלבן`}
                                 className="w-full h-full object-cover"
                                 onError={(e) => {
                                   e.target.style.display = 'none';
                                   e.target.nextElementSibling.style.display = 'flex';
                                 }}
                               />
-                              <div className="w-full h-full bg-gradient-to-br from-pink-100 to-pink-200 flex items-center justify-center" style={{display: 'none'}}>
-                                <Star className="w-12 h-12 sm:w-16 sm:h-16 text-pink-600" aria-hidden="true" />
+                              <div className="w-full h-full flex items-center justify-center" style={{display: 'none', background: 'linear-gradient(135deg, #C6E5F3, #4A90E2)'}}>
+                                <Star className="w-12 h-12 sm:w-16 sm:h-16" style={{ color: '#1F396E' }} aria-hidden="true" />
                               </div>
                             </div>
                           </div>
                         </div>
-                        <CardTitle className="text-2xl sm:text-3xl text-pink-800 mb-3">{t.arabaDetails.title}</CardTitle>
-                        <Badge className="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-base sm:text-lg px-4 sm:px-6 py-2 rounded-full">
-                          {t.viceChairman}
+                        <CardTitle className="text-2xl sm:text-3xl mb-3" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>{t.viceChairman}</CardTitle>
+                        <Badge className="text-base sm:text-lg px-4 sm:px-6 py-2 rounded-full text-white" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)', fontFamily: 'Rubik, sans-serif' }}>
+                          {t.arabaDetails.title}
                         </Badge>
                       </CardHeader>
                       <CardContent className="p-6 sm:p-8 pt-0">
-                        <div className="space-y-3" role="list" aria-label={`פרטי ${t.arabaDetails.title}`}>
+                        <div className="space-y-3" role="list" aria-label={`פרטי ${t.viceChairman}`}>
                           {t.arabaDetails.details.map((detail, index) => (
-                            <div key={index} className="bg-white/90 p-3 sm:p-4 rounded-xl border border-pink-100" role="listitem">
-                              <p className="font-semibold text-pink-900 text-sm sm:text-base">{detail}</p>
+                            <div key={index} className="p-3 sm:p-4 rounded-xl" style={{ backgroundColor: '#C6E5F3', border: '1px solid #4A90E2' }} role="listitem">
+                              <p className="font-semibold text-sm sm:text-base" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>{detail}</p>
                             </div>
                           ))}
                         </div>
@@ -1132,53 +1201,91 @@ export default function Campaign() {
 
                 {/* Team Quote */}
                 <aside className="mt-16 text-center px-4">
-                  <blockquote className="bg-gradient-to-r from-blue-600 to-indigo-600 animate-gradient p-6 sm:p-8 rounded-3xl shadow-2xl max-w-4xl mx-auto">
-                    <p className="text-lg sm:text-2xl md:text-3xl text-white font-bold leading-relaxed">
+                  <blockquote className="p-6 sm:p-8 rounded-2xl shadow-lg max-w-4xl mx-auto" style={{ background: 'linear-gradient(135deg, #1F396E, #4A90E2)' }}>
+                    <p className="text-lg sm:text-2xl md:text-3xl text-white font-bold leading-relaxed" style={{ fontFamily: 'Rubik, sans-serif' }}>
                       {t.teamQuote}
                     </p>
                   </blockquote>
                 </aside>
               </div>
             </div>
+            
+            {/* Decorative bottom border */}
+            <div className="absolute bottom-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(to right, #1F396E, #4A90E2, #C6E5F3)' }}></div>
           </section>
 
           {/* Vision Section */}
           <section 
             id="vision" 
-            className="py-20 bg-gradient-to-br from-blue-100 via-indigo-100 to-blue-50" 
+            className="py-20 relative" 
+            style={{ backgroundColor: '#BFE7F5' }}
             data-animate
             aria-labelledby="vision-title"
             tabIndex="-1"
           >
+            {/* Decorative top border */}
+            <div className="absolute top-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(to right, #C6E5F3, #4A90E2, #1F396E)' }}></div>
+            
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto opacity-100 translate-y-0">
                 <header className="text-center mb-16">
+                  <div className="mb-6">
+                    <Badge className="text-lg px-6 py-3 mb-4" style={{ background: 'linear-gradient(135deg, #1F396E, #4A90E2)', color: 'white', fontFamily: 'Rubik, sans-serif' }}>
+                      <Target className="w-5 h-5 ml-2" />
+                      חזון
+                    </Badge>
+                  </div>
                   <h2 
                     id="vision-title"
-                    className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-700 to-indigo-800 bg-clip-text text-transparent mb-4 px-4"
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4"
+                    style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}
                   >
                     {t.visionTitle}
                   </h2>
-                  <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-indigo-700 mx-auto rounded-full mb-6" aria-hidden="true"></div>
+                  <div className="w-32 h-1 mx-auto rounded-full mb-6" style={{ background: 'linear-gradient(to right, #4A90E2, #1F396E)' }} aria-hidden="true"></div>
                 </header>
 
-                <div className="bg-white backdrop-blur-xl p-8 sm:p-12 rounded-3xl shadow-2xl border border-gray-200 mx-4 sm:mx-0">
-                  <p className="text-lg sm:text-2xl leading-relaxed text-center mb-12 text-black font-semibold px-4 sm:px-0">
+                <div className="p-8 sm:p-12 rounded-2xl shadow-lg mx-4 sm:mx-0" style={{ backgroundColor: '#FFFFFF', border: '3px solid #4A90E2' }}>
+                  <p className="text-lg sm:text-xl leading-relaxed text-center mb-12 font-medium px-4 sm:px-0" style={{ color: '#1A1A1A', fontFamily: 'Rubik, sans-serif' }}>
                     {t.visionText}
                   </p>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8" role="list" aria-label="עקרונות החזון">
                     {t.visionPoints.map((point, index) => (
                       <div key={index} className="text-center group" role="listitem">
-                        <div className={`w-16 h-16 sm:w-20 sm:h-20 ${index === 0 ? 'bg-gradient-to-br from-green-500 to-green-700' : index === 1 ? 'bg-gradient-to-br from-red-500 to-red-700' : 'bg-gradient-to-br from-blue-500 to-blue-700'} rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2`} aria-hidden="true">
-                          <span className="text-2xl sm:text-3xl text-white font-bold">
+                        {/* כל מה שעובד - ירוק, כל מה שלא עבד - אדום, תמורה אמיתית - כחול */}
+                        <div className={`${
+                          index === 0 ? 'w-24 h-24 sm:w-28 sm:h-28' : 'w-16 h-16 sm:w-20 sm:h-20'
+                        } rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:-translate-y-2`} 
+                        style={{ 
+                          background: index === 0 ? 'linear-gradient(135deg, #10B981, #059669)' : 
+                                    index === 1 ? 'linear-gradient(135deg, #EF4444, #DC2626)' : 
+                                    'linear-gradient(135deg, #4A90E2, #1F396E)'
+                        }} aria-hidden="true">
+                          <span className={`${
+                            index === 0 ? 'text-3xl sm:text-4xl' : 'text-2xl sm:text-3xl'
+                          } text-white font-bold`} style={{ fontFamily: 'Rubik, sans-serif' }}>
                             {index === 0 ? '✓' : index === 1 ? '✗' : '↗'}
                           </span>
                         </div>
-                        <h3 className={`text-lg sm:text-xl font-bold mb-2 ${index === 0 ? 'text-green-900' : index === 1 ? 'text-red-900' : 'text-blue-900'}`}>
+                        <h3 className={`${
+                          index === 0 ? 'text-xl sm:text-2xl' : 'text-lg sm:text-xl'
+                        } font-bold mb-2`} style={{ 
+                          color: index === 0 ? '#059669' : 
+                                index === 1 ? '#DC2626' : 
+                                '#1F396E', 
+                          fontFamily: 'Rubik, sans-serif' 
+                        }}>
                           {point.title}
                         </h3>
-                        <p className={`font-semibold text-sm sm:text-base ${index === 0 ? 'text-green-800' : index === 1 ? 'text-red-800' : 'text-blue-800'}`}>
+                        <p className={`font-semibold ${
+                          index === 0 ? 'text-base sm:text-lg' : 'text-sm sm:text-base'
+                        }`} style={{ 
+                          color: index === 0 ? '#065F46' : 
+                                index === 1 ? '#991B1B' : 
+                                '#1A1A1A', 
+                          fontFamily: 'Rubik, sans-serif' 
+                        }}>
                           {point.subtitle}
                         </p>
                       </div>
@@ -1187,27 +1294,40 @@ export default function Campaign() {
                 </div>
               </div>
             </div>
+            
+            {/* Decorative bottom border */}
+            <div className="absolute bottom-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(to right, #1F396E, #4A90E2, #C6E5F3)' }}></div>
           </section>
 
           {/* Platform Section */}
           <section 
             id="platform" 
-            className="platform-section py-20 bg-gradient-to-b from-white to-slate-50" 
+            className="platform-section py-20 bg-white relative" 
             data-animate
             aria-labelledby="platform-title"
             tabIndex="-1"
           >
+            {/* Decorative top border */}
+            <div className="absolute top-0 left-0 right-0 h-2" style={{ background: 'linear-gradient(to right, #C6E5F3, #4A90E2, #1F396E)' }}></div>
+            
             <div className="container mx-auto px-4">
               <div className="platform-section opacity-100 translate-y-0">
                 <header className="text-center mb-16">
+                  <div className="mb-6">
+                    <Badge className="text-lg px-6 py-3 mb-4" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)', color: 'white', fontFamily: 'Rubik, sans-serif' }}>
+                      <GraduationCap className="w-5 h-5 ml-2" />
+                      מצע
+                    </Badge>
+                  </div>
                   <h2 
                     id="platform-title"
-                    className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-700 to-indigo-800 bg-clip-text text-transparent mb-4 px-4"
+                    className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 px-4"
+                    style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}
                   >
                     {t.platformTitle}
                   </h2>
-                  <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-indigo-700 mx-auto rounded-full mb-6" aria-hidden="true"></div>
-                  <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+                  <div className="w-32 h-1 mx-auto rounded-full mb-6" style={{ background: 'linear-gradient(to right, #4A90E2, #1F396E)' }} aria-hidden="true"></div>
+                  <p className="text-lg sm:text-xl max-w-3xl mx-auto px-4" style={{ color: '#1A1A1A', fontFamily: 'Rubik, sans-serif' }}>
                     {t.platformSubtitle}
                   </p>
                 </header>
@@ -1216,8 +1336,8 @@ export default function Campaign() {
                   {t.sections.map((section, index) => (
                     <article key={section.id} className="platform-card card-hover overflow-hidden border-0 shadow-xl opacity-100 translate-y-0">
                       <Card>
-                        <CardHeader className={`bg-gradient-to-r ${section.color} animate-gradient text-white p-6 sm:p-8`}>
-                          <CardTitle className="flex items-center gap-3 sm:gap-4 text-xl sm:text-2xl">
+                        <CardHeader className="text-white p-6 sm:p-8" style={{ background: 'linear-gradient(135deg, #1F396E, #4A90E2)' }}>
+                          <CardTitle className="flex items-center gap-3 sm:gap-4 text-xl sm:text-2xl" style={{ fontFamily: 'Rubik, sans-serif' }}>
                             <div className="p-2 sm:p-3 bg-white/20 rounded-full flex-shrink-0" aria-hidden="true">
                               {index === 0 && <Shield className="w-6 h-6 sm:w-8 sm:h-8" />}
                               {index === 1 && <Heart className="w-6 h-6 sm:w-8 sm:h-8" />}
@@ -1239,39 +1359,26 @@ export default function Campaign() {
                             <span className="leading-tight">{section.title}</span>
                           </CardTitle>
                         </CardHeader>
-                        <CardContent className="platform-background p-6 sm:p-8 bg-white border border-gray-200 shadow-sm">
-                          <p className="platform-subtitle text-base sm:text-lg mb-4 sm:mb-6 text-black leading-relaxed font-bold">
+                        <CardContent className="platform-background p-6 sm:p-8 bg-white shadow-sm" style={{ border: '2px solid #C6E5F3' }}>
+                          <p className="platform-subtitle text-base sm:text-lg mb-4 sm:mb-6 leading-relaxed font-bold" style={{ color: '#1A1A1A', fontFamily: 'Rubik, sans-serif' }}>
                             {section.subtitle}
                           </p>
                           {section.content && (
-                            <p className="platform-content text-sm sm:text-base mb-4 sm:mb-6 text-gray-900 leading-relaxed font-semibold">
+                            <p className="platform-content text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed font-semibold" style={{ color: '#1A1A1A', fontFamily: 'Rubik, sans-serif' }}>
                               {section.content}
                             </p>
                           )}
-                          <div className="bg-blue-50 p-4 sm:p-6 rounded-2xl border-2 border-blue-200">
-                            <h4 className="font-black text-blue-950 mb-3 text-base sm:text-lg">{section.actions}</h4>
+                          <div className="p-4 sm:p-6 rounded-2xl" style={{ backgroundColor: '#C6E5F3', border: '2px solid #4A90E2' }}>
+                            <h4 className="font-black mb-3 text-base sm:text-lg" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>{section.actions}</h4>
                             <ul className="space-y-2" role="list">
                               {section.items.map((item, itemIndex) => (
-                                <li key={itemIndex} className="flex items-start gap-3 text-sm sm:text-base platform-items text-blue-950 font-bold" role="listitem">
-                                  <div className="w-2 h-2 bg-blue-800 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
+                                <li key={itemIndex} className="flex items-start gap-3 text-sm sm:text-base platform-items font-bold" role="listitem" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>
+                                  <div className="w-2 h-2 rounded-full mt-2 flex-shrink-0" style={{ backgroundColor: '#1F396E' }} aria-hidden="true"></div>
                                   <span>{item}</span>
                                 </li>
                               ))}
                             </ul>
                           </div>
-                          {section.commitments && (
-                            <div className="mt-4 sm:mt-6 bg-green-50 p-4 sm:p-6 rounded-2xl border-2 border-green-200">
-                              <h4 className="font-black text-green-950 mb-3 text-base sm:text-lg">{section.promises}</h4>
-                              <ul className="space-y-2" role="list">
-                                {section.commitments.map((commitment, commitmentIndex) => (
-                                  <li key={commitmentIndex} className="flex items-start gap-3 text-sm sm:text-base platform-commitments text-green-950 font-bold" role="listitem">
-                                    <div className="w-2 h-2 bg-green-800 rounded-full mt-2 flex-shrink-0" aria-hidden="true"></div>
-                                    <span>{commitment}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
                         </CardContent>
                       </Card>
                     </article>
@@ -1283,34 +1390,33 @@ export default function Campaign() {
 
           {/* Call to Action */}
           <section 
-            className="py-20 bg-gradient-to-br from-blue-600 via-indigo-700 to-blue-800 animate-gradient relative overflow-hidden"
+            className="py-20 relative overflow-hidden"
+            style={{ background: 'linear-gradient(135deg, #1F396E 0%, #4A90E2 100%)' }}
             aria-labelledby="cta-title"
           >
             <div className="container mx-auto px-4 text-center relative z-10">
               <div className="max-w-4xl mx-auto">
                 <h2 
                   id="cta-title"
-                  className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 sm:mb-8 text-glow"
+                  className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 sm:mb-8"
+                  style={{ fontFamily: 'Rubik, sans-serif' }}
                 >
-                  {language === 'he' ? 'פשוט ' : 'Simply '}
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
-                    {language === 'he' ? 'מעלים הילוך' : 'Shifting Up'}
-                  </span>
+                  {t.ctaTitle}
                 </h2>
             
-                <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-6 sm:p-8 md:p-12 mb-6 sm:mb-8 glass-effect">
-                  <p className="text-base sm:text-xl md:text-2xl text-blue-100 leading-relaxed mb-4 sm:mb-6">
+                <div className="glass-effect rounded-2xl p-6 sm:p-8 md:p-10 mb-6 sm:mb-8">
+                  <p className="text-base sm:text-xl md:text-2xl text-white leading-relaxed mb-4 sm:mb-6 opacity-90" style={{ fontFamily: 'Rubik, sans-serif' }}>
                     {t.ctaText}
                   </p>
                   
-                  <div className="bg-gradient-to-r from-yellow-400/20 to-orange-400/20 p-4 sm:p-6 rounded-2xl mb-4 sm:mb-6">
-                    <p className="text-base sm:text-xl text-white font-semibold">
+                  <div className="p-4 sm:p-6 rounded-xl mb-4 sm:mb-6" style={{ backgroundColor: 'rgba(198, 229, 243, 0.2)', border: '1px solid rgba(198, 229, 243, 0.3)' }}>
+                    <p className="text-base sm:text-xl text-white font-semibold" style={{ fontFamily: 'Rubik, sans-serif' }}>
                       {t.ctaHighlight}
                     </p>
                   </div>
                   
-                  <div className="bg-white/20 p-6 sm:p-8 rounded-2xl border border-white/30">
-                    <p className="text-xl sm:text-3xl md:text-4xl font-black text-white animate-pulse-glow">
+                  <div className="bg-white/20 p-6 sm:p-8 rounded-xl border border-white/30">
+                    <p className="text-xl sm:text-2xl md:text-3xl font-black text-white" style={{ fontFamily: 'Rubik, sans-serif' }}>
                       {t.ctaFinal}
                     </p>
                   </div>
@@ -1318,7 +1424,8 @@ export default function Campaign() {
 
                 <Button 
                   size="lg"
-                  className="bg-gradient-to-r from-yellow-400 to-orange-500 text-orange-900 hover:from-yellow-300 hover:to-orange-400 text-lg sm:text-xl px-8 sm:px-12 py-5 sm:py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 font-bold focus-visible w-full sm:w-auto"
+                  className="bg-white text-lg sm:text-xl px-8 sm:px-12 py-5 sm:py-6 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 font-bold focus-visible w-full sm:w-auto"
+                  style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}
                   aria-label="קריאה לפעולה - בואו נעלה הילוך יחד"
                 >
                   <Plus className={`${language === 'he' ? 'ml-3' : 'mr-3'} h-6 w-6`} aria-hidden="true" />
@@ -1332,25 +1439,26 @@ export default function Campaign() {
 
         {/* Footer */}
         <footer 
-          className="bg-gradient-to-br from-gray-900 via-slate-900 to-gray-900 text-white py-8 sm:py-12"
+          className="text-white py-8 sm:py-12"
+          style={{ background: 'linear-gradient(135deg, #1A1A1A 0%, #1F396E 100%)' }}
           role="contentinfo"
           aria-label="מידע על הקמפיין"
         >
           <div className="container mx-auto px-4">
             <div className="text-center">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ color: '#C6E5F3', fontFamily: 'Rubik, sans-serif' }}>
                 {t.title}
               </h3>
               <div className="flex items-center justify-center gap-2 sm:gap-4 mb-4 sm:mb-6" aria-hidden="true">
-                <div className="h-px w-12 sm:w-20 bg-gradient-to-r from-transparent to-gray-500"></div>
-                <Badge className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base">
+                <div className="h-px w-12 sm:w-20" style={{ background: 'linear-gradient(to right, transparent, #4A90E2)' }}></div>
+                <Badge className="text-white px-3 sm:px-4 py-1 sm:py-2 text-sm sm:text-base" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)', fontFamily: 'Rubik, sans-serif' }}>
                   <Plus className="w-3 h-3 sm:w-4 sm:h-4 ml-1" />
                   {t.slogan}
                 </Badge>
-                <div className="h-px w-12 sm:w-20 bg-gradient-to-l from-transparent to-gray-500"></div>
+                <div className="h-px w-12 sm:w-20" style={{ background: 'linear-gradient(to left, transparent, #4A90E2)' }}></div>
               </div>
-              <p className="text-gray-400 mb-3 sm:mb-4 text-base sm:text-lg px-4">{t.university}</p>
-              <p className="text-gray-500 max-w-2xl mx-auto text-sm sm:text-base px-4">
+              <p className="mb-3 sm:mb-4 text-base sm:text-lg px-4" style={{ color: '#C6E5F3', fontFamily: 'Rubik, sans-serif' }}>{t.university}</p>
+              <p className="max-w-2xl mx-auto text-sm sm:text-base px-4" style={{ color: '#C6E5F3', fontFamily: 'Rubik, sans-serif' }}>
                 {t.footerText}
               </p>
             </div>
