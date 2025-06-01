@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ChevronDown, Users, Target, Phone, Share2, ExternalLink, GraduationCap, Heart, Lightbulb, Shield, Globe, Leaf, Star, Plus, ArrowRight, Sparkles, Eye, EyeOff, Minus, Languages } from 'lucide-react';
+import { ChevronDown, Users, Target, Phone, Share2, ExternalLink, GraduationCap, Heart, Lightbulb, Shield, Globe, Leaf, Star, Plus, ArrowRight, Sparkles, Eye, EyeOff, Minus, Languages, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from "@/components/ui/badge";
@@ -273,6 +273,8 @@ const content = {
     ctaHighlight: 'זה הזמן וההזדמנות שלכם להשפיע, לבחור באנשים שמכירים את המערכת מבפנים',
     ctaFinal: 'ניפגש בקלפי, ליד הפתק של הקמפיין הלבן!',
     ctaButton: 'בואו נעלה הילוך יחד!',
+    instagramButton: 'עקבו אחרינו באינסטגרם',
+    instagramHandle: '@thewhitecampaign',
     footerText: 'באנו לעבוד עבורכם בשקיפות מלאה ולמען מי שבאמת חשוב – אתם.',
     accessibility: {
       title: 'כלי נגישות',
@@ -549,6 +551,8 @@ const content = {
     ctaHighlight: 'This is your time and opportunity to make an impact, to choose people who know the system from the inside',
     ctaFinal: 'See you at the polls, next to the White Campaign ballot!',
     ctaButton: 'Let\'s Level Up Together!',
+    instagramButton: 'Follow Us on Instagram',
+    instagramHandle: '@thewhitecampaign',
     footerText: 'We came to work for you with full transparency and for those who really matter – you.',
     accessibility: {
       title: 'Accessibility Tools',
@@ -995,7 +999,7 @@ export default function Campaign() {
                     boxShadow: '0 25px 50px rgba(31, 57, 110, 0.3), 0 0 0 4px rgba(198, 229, 243, 0.3), 0 0 0 8px rgba(198, 229, 243, 0.1)' 
                   }}>
                     <img 
-                      src="/images/team-photo.jpg" 
+                      src="/images/team-photo2.jpg" 
                       alt="רז בן חיים וערבה בנקין שדה, מועמדי הקמפיין הלבן לאגודת הסטודנטים באוניברסיטת רייכמן" 
                       className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                       onError={(e) => {
@@ -1259,7 +1263,7 @@ export default function Campaign() {
                             <div className="absolute inset-0 rounded-full" style={{ background: 'linear-gradient(135deg, #4A90E2, #1F396E)' }} aria-hidden="true"></div>
                             <div className="absolute inset-2 bg-white rounded-full overflow-hidden">
                               <img 
-                                src="/images/araba-benkin-sade.jpg" 
+                                src="/images/araba-benkin-sade2.jpg" 
                                 alt={`תמונה של ${t.viceChairman}, מועמדת לסגנית יו״ר הקמפיין הלבן`}
                                 className="w-full h-full object-cover"
                                 onError={(e) => {
@@ -1524,6 +1528,22 @@ export default function Campaign() {
                   {t.ctaButton}
                   <ArrowRight className={`${language === 'he' ? 'mr-3' : 'ml-3'} h-6 w-6`} aria-hidden="true" />
                 </Button>
+
+                {/* Instagram Button */}
+                <div className="mt-6 sm:mt-8">
+                  <Button 
+                    size="lg"
+                    variant="outline"
+                    className="glass-effect text-white border-white/30 hover:bg-white/20 text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 rounded-xl transition-all duration-300 focus-visible w-full sm:w-auto"
+                    style={{ fontFamily: 'Rubik, sans-serif' }}
+                    onClick={() => window.open('https://www.instagram.com/thewhitecampaign?igsh=MTBocWU2MXZtbXJiNw==', '_blank', 'noopener,noreferrer')}
+                    aria-label={`${t.instagramButton} - פתיחה בטאב חדש`}
+                  >
+                    <Instagram className={`${language === 'he' ? 'ml-3' : 'mr-3'} h-5 w-5`} aria-hidden="true" />
+                    {t.instagramButton}
+                    <ExternalLink className={`${language === 'he' ? 'mr-3' : 'ml-3'} h-4 w-4`} aria-hidden="true" />
+                  </Button>
+                </div>
               </div>
             </div>
           </section>
@@ -1550,6 +1570,23 @@ export default function Campaign() {
                 <div className="h-px w-12 sm:w-20" style={{ background: 'linear-gradient(to left, transparent, #4A90E2)' }}></div>
               </div>
               <p className="mb-3 sm:mb-4 text-base sm:text-lg px-4" style={{ color: '#C6E5F3', fontFamily: 'Rubik, sans-serif' }}>{t.university}</p>
+              
+              {/* Instagram Link in Footer */}
+              <div className="mb-4 sm:mb-6">
+                <button
+                  onClick={() => window.open('https://www.instagram.com/thewhitecampaign?igsh=MTBocWU2MXZtbXJiNw==', '_blank', 'noopener,noreferrer')}
+                  className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 hover:bg-white/10 focus-visible"
+                  style={{ border: '1px solid #4A90E2', color: '#C6E5F3' }}
+                  aria-label={`עקבו אחרי ${t.instagramHandle} באינסטגרם - פתיחה בטאב חדש`}
+                >
+                  <Instagram className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
+                  <span className="text-sm sm:text-base font-medium" style={{ fontFamily: 'Rubik, sans-serif' }}>
+                    {t.instagramHandle}
+                  </span>
+                  <ExternalLink className="w-3 h-3 sm:w-4 sm:h-4 opacity-70" aria-hidden="true" />
+                </button>
+              </div>
+              
               <p className="max-w-2xl mx-auto text-sm sm:text-base px-4" style={{ color: '#C6E5F3', fontFamily: 'Rubik, sans-serif' }}>
                 {t.footerText}
               </p>
