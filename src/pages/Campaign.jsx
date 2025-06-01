@@ -1302,6 +1302,27 @@ export default function Campaign() {
                       {t.teamQuote}
                     </p>
                   </blockquote>
+                  
+                  {/* Instagram Button - Team Section */}
+                  <div className="mt-8">
+                    <Button 
+                      size="lg"
+                      variant="outline"
+                      className="text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 rounded-xl transition-all duration-300 focus-visible w-full sm:w-auto hover:shadow-lg transform hover:-translate-y-1"
+                      style={{ 
+                        borderColor: '#4A90E2', 
+                        color: '#1F396E', 
+                        fontFamily: 'Rubik, sans-serif',
+                        backgroundColor: 'white'
+                      }}
+                      onClick={() => window.open('https://www.instagram.com/thewhitecampaign?igsh=MTBocWU2MXZtbXJiNw==', '_blank', 'noopener,noreferrer')}
+                      aria-label={`${t.instagramButton} - פתיחה בטאב חדש`}
+                    >
+                      <Instagram className={`${language === 'he' ? 'ml-3' : 'mr-3'} h-5 w-5`} aria-hidden="true" />
+                      {t.instagramButton}
+                      <ExternalLink className={`${language === 'he' ? 'mr-3' : 'ml-3'} h-4 w-4`} aria-hidden="true" />
+                    </Button>
+                  </div>
                 </aside>
               </div>
             </div>
@@ -1479,6 +1500,29 @@ export default function Campaign() {
                       </Card>
                     </article>
                   ))}
+                  
+                  {/* Instagram Button - Platform Section */}
+                  <div className="text-center mt-12 px-4">
+                    <div className="p-6 sm:p-8 rounded-2xl max-w-2xl mx-auto" style={{ background: 'linear-gradient(135deg, #C6E5F3, #BFE7F5)', border: '2px solid #4A90E2' }}>
+                      <p className="text-lg sm:text-xl font-bold mb-6" style={{ color: '#1F396E', fontFamily: 'Rubik, sans-serif' }}>
+                        {language === 'he' ? 'רוצים לקבל עדכונים על הקמפיין?' : 'Want to get campaign updates?'}
+                      </p>
+                      <Button 
+                        size="lg"
+                        className="text-base sm:text-lg px-6 sm:px-10 py-4 sm:py-5 rounded-xl transition-all duration-300 focus-visible w-full sm:w-auto hover:shadow-lg transform hover:-translate-y-1 text-white"
+                        style={{ 
+                          background: 'linear-gradient(135deg, #1F396E, #4A90E2)',
+                          fontFamily: 'Rubik, sans-serif'
+                        }}
+                        onClick={() => window.open('https://www.instagram.com/thewhitecampaign?igsh=MTBocWU2MXZtbXJiNw==', '_blank', 'noopener,noreferrer')}
+                        aria-label={`${t.instagramButton} - פתיחה בטאב חדש`}
+                      >
+                        <Instagram className={`${language === 'he' ? 'ml-3' : 'mr-3'} h-5 w-5`} aria-hidden="true" />
+                        {t.instagramButton}
+                        <ExternalLink className={`${language === 'he' ? 'mr-3' : 'ml-3'} h-4 w-4`} aria-hidden="true" />
+                      </Button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
