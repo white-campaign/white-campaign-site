@@ -752,8 +752,7 @@ export default function Campaign() {
         .font-large { font-size: 1.2rem; }
         .font-xlarge { font-size: 1.4rem; }
         
-        /* Font size scaling for all elements */
-        .font-normal * { font-size: inherit !important; }
+        /* Font size scaling for accessibility - only for large and xlarge */
         .font-large * { 
           font-size: calc(100% * 1.2) !important; 
         }
@@ -761,7 +760,7 @@ export default function Campaign() {
           font-size: calc(100% * 1.4) !important; 
         }
         
-        /* Specific overrides for headings to maintain hierarchy */
+        /* Specific overrides for headings to maintain hierarchy - only for large and xlarge */
         .font-large h1 { font-size: calc(4rem * 1.2) !important; }
         .font-large h2 { font-size: calc(3rem * 1.2) !important; }
         .font-large h3 { font-size: calc(2rem * 1.2) !important; }
@@ -788,7 +787,7 @@ export default function Campaign() {
         .font-xlarge .text-6xl { font-size: calc(3.75rem * 1.4) !important; }
         .font-xlarge .text-7xl { font-size: calc(4.5rem * 1.4) !important; }
         
-        /* Text sizes */
+        /* Text sizes - only for large and xlarge */
         .font-large .text-sm { font-size: calc(0.875rem * 1.2) !important; }
         .font-large .text-base { font-size: calc(1rem * 1.2) !important; }
         .font-large .text-xs { font-size: calc(0.75rem * 1.2) !important; }
