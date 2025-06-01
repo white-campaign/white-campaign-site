@@ -1095,7 +1095,7 @@ export default function Campaign() {
                         boxShadow: '0 25px 50px rgba(31, 57, 110, 0.3), 0 0 0 4px rgba(198, 229, 243, 0.3), 0 0 0 8px rgba(198, 229, 243, 0.1)' 
                       }}>
                         <img 
-                          src="/images/team-photo.jpg" 
+                          src="/images/team-photo2.jpg" 
                           alt="רז בן חיים וערבה בנקין שדה, מועמדי הקמפיין הלבן לאגודת הסטודנטים באוניברסיטת רייכמן" 
                           className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                           onError={(e) => {
