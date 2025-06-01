@@ -752,6 +752,51 @@ export default function Campaign() {
         .font-large { font-size: 1.2rem; }
         .font-xlarge { font-size: 1.4rem; }
         
+        /* Font size scaling for all elements */
+        .font-normal * { font-size: inherit !important; }
+        .font-large * { 
+          font-size: calc(100% * 1.2) !important; 
+        }
+        .font-xlarge * { 
+          font-size: calc(100% * 1.4) !important; 
+        }
+        
+        /* Specific overrides for headings to maintain hierarchy */
+        .font-large h1 { font-size: calc(4rem * 1.2) !important; }
+        .font-large h2 { font-size: calc(3rem * 1.2) !important; }
+        .font-large h3 { font-size: calc(2rem * 1.2) !important; }
+        .font-large h4 { font-size: calc(1.5rem * 1.2) !important; }
+        .font-large .text-lg { font-size: calc(1.125rem * 1.2) !important; }
+        .font-large .text-xl { font-size: calc(1.25rem * 1.2) !important; }
+        .font-large .text-2xl { font-size: calc(1.5rem * 1.2) !important; }
+        .font-large .text-3xl { font-size: calc(1.875rem * 1.2) !important; }
+        .font-large .text-4xl { font-size: calc(2.25rem * 1.2) !important; }
+        .font-large .text-5xl { font-size: calc(3rem * 1.2) !important; }
+        .font-large .text-6xl { font-size: calc(3.75rem * 1.2) !important; }
+        .font-large .text-7xl { font-size: calc(4.5rem * 1.2) !important; }
+        
+        .font-xlarge h1 { font-size: calc(4rem * 1.4) !important; }
+        .font-xlarge h2 { font-size: calc(3rem * 1.4) !important; }
+        .font-xlarge h3 { font-size: calc(2rem * 1.4) !important; }
+        .font-xlarge h4 { font-size: calc(1.5rem * 1.4) !important; }
+        .font-xlarge .text-lg { font-size: calc(1.125rem * 1.4) !important; }
+        .font-xlarge .text-xl { font-size: calc(1.25rem * 1.4) !important; }
+        .font-xlarge .text-2xl { font-size: calc(1.5rem * 1.4) !important; }
+        .font-xlarge .text-3xl { font-size: calc(1.875rem * 1.4) !important; }
+        .font-xlarge .text-4xl { font-size: calc(2.25rem * 1.4) !important; }
+        .font-xlarge .text-5xl { font-size: calc(3rem * 1.4) !important; }
+        .font-xlarge .text-6xl { font-size: calc(3.75rem * 1.4) !important; }
+        .font-xlarge .text-7xl { font-size: calc(4.5rem * 1.4) !important; }
+        
+        /* Text sizes */
+        .font-large .text-sm { font-size: calc(0.875rem * 1.2) !important; }
+        .font-large .text-base { font-size: calc(1rem * 1.2) !important; }
+        .font-large .text-xs { font-size: calc(0.75rem * 1.2) !important; }
+        
+        .font-xlarge .text-sm { font-size: calc(0.875rem * 1.4) !important; }
+        .font-xlarge .text-base { font-size: calc(1rem * 1.4) !important; }
+        .font-xlarge .text-xs { font-size: calc(0.75rem * 1.4) !important; }
+        
         /* High contrast mode */
         .high-contrast {
           filter: contrast(150%) brightness(1.2);
@@ -894,7 +939,9 @@ export default function Campaign() {
                 variant="outline"
                 onClick={increaseFontSize}
                 aria-label={t.accessibility.increaseFont}
-                className="p-2 min-w-[40px] touch-manipulation text-xs"
+                aria-pressed={fontSize === 'xlarge'}
+                disabled={fontSize === 'xlarge'}
+                className={`p-2 min-w-[40px] touch-manipulation text-xs ${fontSize === 'xlarge' ? 'opacity-50' : ''}`}
                 style={{ borderColor: '#C6E5F3', color: '#1F396E' }}
               >
                 <Plus className="w-3 h-3 md:w-4 md:h-4" />
@@ -905,12 +952,20 @@ export default function Campaign() {
                 variant="outline"
                 onClick={decreaseFontSize}
                 aria-label={t.accessibility.decreaseFont}
-                className="p-2 min-w-[40px] touch-manipulation text-xs"
+                aria-pressed={fontSize === 'normal'}
+                disabled={fontSize === 'normal'}
+                className={`p-2 min-w-[40px] touch-manipulation text-xs ${fontSize === 'normal' ? 'opacity-50' : ''}`}
                 style={{ borderColor: '#C6E5F3', color: '#1F396E' }}
               >
                 <Minus className="w-3 h-3 md:w-4 md:h-4" />
                 <span className="sr-only">{t.accessibility.decreaseFont}</span>
               </Button>
+              {/* Font Size Indicator */}
+              <div className="flex items-center justify-center px-2 text-xs font-bold" style={{ color: '#1F396E' }}>
+                {fontSize === 'normal' && 'א'}
+                {fontSize === 'large' && 'אא'}
+                {fontSize === 'xlarge' && 'אאא'}
+              </div>
             </div>
             <Button
               size="sm"
